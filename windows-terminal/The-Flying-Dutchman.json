@@ -1,0 +1,23 @@
+{
+    "name": "The Flying Dutchman",
+    "background": "#0B1119",
+    "black": "#0B1119",
+    "blue": "#5DADE2",
+    "brightBlack": "#546E7A",
+    "brightBlue": "#90CDF4",
+    "brightCyan": "#81E6D9",
+    "brightGreen": "#68D391",
+    "brightPurple": "#6B8A96",
+    "brightRed": "#FF7575",
+    "brightWhite": "#FFFFFF",
+    "brightYellow": "#F0D074",
+    "cursorColor": "#5DADE2",
+    "cyan": "#4DC1B5",
+    "foreground": "#B0C4DE",
+    "green": "#45B097",
+    "purple": "#5C7C8A",
+    "red": "#E85D5D",
+    "selectionBackground": "#2B4C6F",
+    "white": "#B0C4DE",
+    "yellow": "#E4B968"
+}
