@@ -1,0 +1,1 @@
+Please save the VS Code screenshot as screenshots/react-typescript-example.png

@@ -83,6 +83,13 @@ For the best experience sailing with The Flying Dutchman, consider these setting
 }
 ```
 
+## Screenshots
+
+### React/TypeScript in Action
+![The Flying Dutchman theme showing React/TypeScript code with beautiful syntax highlighting](./screenshots/react-typescript-example.png)
+
+*The Flying Dutchman theme showcasing its nautical color palette with React components, TypeScript interfaces, and JSX syntax. Notice the deep ocean background, aged brass constants, sea foam variables, and Caribbean blue functions.*
+
 ## What's New
 
 ### Recent Updates

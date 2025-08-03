@@ -1,9 +1,10 @@
 {
     "name": "the-flying-dutchman-theme",
     "displayName": "The Flying Dutchman Theme",
-    "description": "A nautical dark theme with deep ocean blues, aged brass accents, and sea-weathered colors. Complete syntax highlighting for modern languages with accessibility-focused contrast.",
-    "version": "1.0.0",
+    "description": "A nautical dark theme inspired by the Flying Dutchman ghost ship. Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
+    "version": "1.1.0",
     "publisher": "DavyJones",
+    "icon": "icon.png",
     "author": {
         "name": "Andrew Wilkinson",
         "url": "https://github.com/ADWilkinson"
@@ -12,6 +13,8 @@
     "keywords": [
         "theme",
         "dark theme",
+        "color theme",
+        "syntax highlighting",
         "nautical",
         "ocean",
         "maritime",
@@ -20,13 +23,22 @@
         "ship",
         "flying dutchman",
         "pirate",
+        "blue theme",
         "accessibility",
         "high contrast",
+        "readability",
+        "professional",
+        "terminal theme",
+        "multi-platform",
         "typescript",
         "javascript",
         "react",
         "python",
-        "css"
+        "css",
+        "html",
+        "json",
+        "markdown",
+        "productivity"
     ],
     "homepage": "https://github.com/ADWilkinson/the-flying-dutchman-theme",
     "repository": {

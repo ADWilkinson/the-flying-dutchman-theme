@@ -44,6 +44,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Terminal integration with themed ANSI colors
 - Consistent color hierarchy and visual grouping
 
+## [1.1.0] - 2024-01-XX
+
+### Added
+- Ship sail icon that perfectly matches the nautical theme
+- React/TypeScript code screenshot for marketplace preview
+- Improved marketplace description and search keywords
+
+### Changed
+- Enhanced theme description with better feature highlights
+- Added more relevant keywords for discoverability
+- Maintained "DavyJones" publisher ID for consistency
+
+### Fixed
+- Icon path configuration for proper VS Code display
+
 ## [Unreleased]
 
 ### Planned
