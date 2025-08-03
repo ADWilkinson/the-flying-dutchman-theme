@@ -1,0 +1,57 @@
+# The Flying Dutchman Theme for Warp Terminal
+# A nautical-inspired dark theme with oceanic blues and ship-weathered colors
+# Inspired by the legendary ghost ship and Davy Jones himself
+
+name: 'The Flying Dutchman'
+
+# Accent color for UI elements (Ocean Blue)
+accent: '#5DADE2'
+
+# Input cursor color (Ocean Blue)
+cursor: '#5DADE2'
+
+# Terminal background color (Deep Sea)
+background: '#0B1119'
+
+# The foreground color (Light Powder Blue)  
+foreground: '#B0C4DE'
+
+# Whether the theme is lighter or darker
+details: darker
+
+# ANSI escape colors - Flying Dutchman nautical palette
+terminal_colors:
+  normal:
+    # Deep Sea Black
+    black: '#0B1119'
+    # Ship Warning Red
+    red: '#E85D5D'
+    # Sea Kelp Green
+    green: '#45B097'
+    # Treasure Gold
+    yellow: '#E4B968'
+    # Ocean Blue
+    blue: '#5DADE2'
+    # Storm Purple
+    magenta: '#5C7C8A'
+    # Seafoam Cyan
+    cyan: '#4DC1B5'
+    # Light Powder Blue
+    white: '#B0C4DE'
+  bright:
+    # Charcoal Gray
+    black: '#546E7A'
+    # Bright Coral Red
+    red: '#FF7575'
+    # Bright Mint Green
+    green: '#68D391'
+    # Bright Sand Yellow
+    yellow: '#F0D074'
+    # Sky Blue
+    blue: '#90CDF4'
+    # Bright Steel Blue
+    magenta: '#6B8A96'
+    # Bright Aqua
+    cyan: '#81E6D9'
+    # Pure White
+    white: '#FFFFFF'

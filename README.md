@@ -1,6 +1,15 @@
-# The Flying Dutchman - VSCode Theme
+# The Flying Dutchman - Terminal & Editor Theme Collection
 
-A dark VSCode theme inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.
+A nautical-inspired dark theme collection for terminals and code editors, inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.
+
+## Available For
+
+- **[VS Code](./themes/)** - Complete syntax highlighting theme
+- **[Warp Terminal](./warp/)** - Modern Rust-based terminal theme
+- **[iTerm2](./iterm/)** - macOS terminal theme
+- **[Windows Terminal](./windows-terminal/)** - Windows modern terminal theme
+- **[Vim/Neovim](./vim/)** - Terminal-based editor theme
+- **[Sublime Text](./sublime-text/)** - Cross-platform editor theme
 
 ## Theme Philosophy
 
@@ -25,21 +34,35 @@ The Flying Dutchman theme draws inspiration from:
 
 ## Installation
 
+### VS Code
 1. Open **Extensions** sidebar panel in VS Code: `View → Extensions`
 2. Search for `The Flying Dutchman`
 3. Click **Install**
 4. Click **Reload** to reload VS Code
 5. Code > Preferences > Color Theme > **The Flying Dutchman**
 
+### Warp Terminal
+1. Copy the theme file to Warp's themes directory:
+   ```bash
+   mkdir -p ~/.warp/themes
+   cp warp/the-flying-dutchman.yaml ~/.warp/themes/
+   ```
+2. Open Warp Terminal settings (`Cmd+,` on macOS)
+3. Navigate to **Appearance** → **Themes**
+4. Select "The Flying Dutchman" from the theme list
+
+### Other Terminals
+Each terminal has its own installation instructions - see the README in each subdirectory for specific setup steps.
+
 ## Manual Installation
 
 1. Clone this repository or download the ZIP
-2. Copy the folder to your VS Code extensions directory:
-   - **Windows**: `%USERPROFILE%\.vscode\extensions\`
-   - **macOS**: `~/.vscode/extensions/`
-   - **Linux**: `~/.vscode/extensions/`
-3. Reload VS Code
-4. Select the theme: Code > Preferences > Color Theme > **The Flying Dutchman**
+2. Follow the specific installation instructions for your terminal/editor:
+   - **VS Code**: Copy to `~/.vscode/extensions/` or `%USERPROFILE%\.vscode\extensions\`
+   - **Warp**: Copy YAML to `~/.warp/themes/`
+   - **iTerm2**: Import the `.itermcolors` file
+   - **Windows Terminal**: Add JSON to settings
+   - **Vim**: Copy to `~/.vim/colors/`
 
 ## Screenshots
 
@@ -60,9 +83,18 @@ For the best experience sailing with The Flying Dutchman, consider these setting
 }
 ```
 
+## What's New
+
+### Recent Updates
+- ✨ **Enhanced VSCode Theme**: Added modern features (Command Center, Sticky Scroll, Inline Chat)
+- 🔧 **Expanded Semantic Tokens**: Better TypeScript/JavaScript support with decorators, enums, interfaces
+- 🎨 **Improved Language Support**: Enhanced Sublime Text theme with comprehensive JavaScript, TypeScript, CSS, Python, JSON, and Markdown support
+- 🐛 **Color Consistency**: Fixed discrepancies between iTerm and Windows Terminal themes
+- 📚 **Better Documentation**: Complete AI development context and improved installation guides
+
 ## Feedback
 
-Encountered a bug or have suggestions? Open an issue on [GitHub](https://github.com/yourusername/the-flying-dutchman-theme/issues).
+Encountered a bug or have suggestions? Open an issue on [GitHub](https://github.com/ADWilkinson/the-flying-dutchman-theme/issues).
 
 ## License
 

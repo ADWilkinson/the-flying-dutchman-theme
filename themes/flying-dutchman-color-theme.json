@@ -53,6 +53,45 @@
         },
         "namespace": {
             "foreground": "#d1a458"
+        },
+        "decorator": {
+            "foreground": "#e4b968"
+        },
+        "decorator.declaration": {
+            "foreground": "#e4b968"
+        },
+        "enum": {
+            "foreground": "#d1a458"
+        },
+        "enumMember": {
+            "foreground": "#4dc1b5"
+        },
+        "interface": {
+            "foreground": "#d1a458"
+        },
+        "interface.declaration": {
+            "foreground": "#d1a458"
+        },
+        "typeParameter": {
+            "foreground": "#7aa3c1"
+        },
+        "typeParameter.declaration": {
+            "foreground": "#7aa3c1"
+        },
+        "operator": {
+            "foreground": "#94a3b8"
+        },
+        "operator.declaration": {
+            "foreground": "#94a3b8"
+        },
+        "label": {
+            "foreground": "#5dade2"
+        },
+        "event": {
+            "foreground": "#5dade2"
+        },
+        "event.declaration": {
+            "foreground": "#5dade2"
         }
     },
     "semanticClass": "flying-dutchman",
@@ -310,7 +349,34 @@
         "gitDecoration.untrackedResourceForeground": "#68d391",
         "gitDecoration.ignoredResourceForeground": "#4a5568",
         "gitDecoration.conflictingResourceForeground": "#e4b968",
-        "gitDecoration.submoduleResourceForeground": "#718096"
+        "gitDecoration.submoduleResourceForeground": "#718096",
+        
+        "commandCenter.foreground": "#94a3b8",
+        "commandCenter.activeForeground": "#b0c4de",
+        "commandCenter.background": "#0b1929",
+        "commandCenter.activeBackground": "#182028",
+        "commandCenter.border": "#1f2937",
+        "commandCenter.inactiveForeground": "#546e7a",
+        "commandCenter.activeBorder": "#5dade2",
+        
+        "editorStickyScroll.background": "#0b1119",
+        "editorStickyScroll.border": "#1f2937",
+        "editorStickyScrollHover.background": "#0b1929",
+        
+        "inlineChat.background": "#0b1929",
+        "inlineChat.border": "#1a365d",
+        "inlineChat.shadow": "#00000066",
+        "inlineChat.regionHighlight": "#2b4c6f33",
+        "inlineChatInput.background": "#0b1119",
+        "inlineChatInput.border": "#1f2937",
+        "inlineChatInput.focusBorder": "#5dade2",
+        "inlineChatInput.placeholderForeground": "#546e7a",
+        
+        "editorUnicodeHighlight.border": "#e4b968",
+        "editorUnicodeHighlight.background": "#e4b96833",
+        
+        "contrastActiveBorder": "#5dade2",
+        "contrastBorder": "#1a365d"
     },
     "tokenColors": [
         {

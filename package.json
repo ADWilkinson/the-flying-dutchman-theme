@@ -1,37 +1,47 @@
 {
-    "name": "the-flying-dutchman",
-    "displayName": "The Flying Dutchman",
-    "description": "A dark VSCode theme inspired by Davy Jones and the legendary ghost ship. Features deep ocean blues, aged brass accents, and nautical elements from the golden age of sail.",
+    "name": "the-flying-dutchman-theme",
+    "displayName": "The Flying Dutchman Theme",
+    "description": "A nautical dark theme with deep ocean blues, aged brass accents, and sea-weathered colors. Complete syntax highlighting for modern languages with accessibility-focused contrast.",
     "version": "1.0.0",
-    "publisher": "nautical-themes",
+    "publisher": "DavyJones",
+    "author": {
+        "name": "Andrew Wilkinson",
+        "url": "https://github.com/ADWilkinson"
+    },
     "license": "MIT",
     "keywords": [
         "theme",
-        "dark",
+        "dark theme",
         "nautical",
         "ocean",
-        "pirate",
+        "maritime",
+        "sea",
+        "sailing",
         "ship",
         "flying dutchman",
-        "davy jones",
-        "maritime",
-        "sea"
+        "pirate",
+        "accessibility",
+        "high contrast",
+        "typescript",
+        "javascript",
+        "react",
+        "python",
+        "css"
     ],
-    "icon": "icon.png",
-    "homepage": "https://github.com/yourusername/the-flying-dutchman-theme",
+    "homepage": "https://github.com/ADWilkinson/the-flying-dutchman-theme",
     "repository": {
-        "url": "https://github.com/yourusername/the-flying-dutchman-theme",
-        "type": "git"
+        "type": "git",
+        "url": "https://github.com/ADWilkinson/the-flying-dutchman-theme.git"
     },
     "bugs": {
-        "url": "https://github.com/yourusername/the-flying-dutchman-theme/issues"
+        "url": "https://github.com/ADWilkinson/the-flying-dutchman-theme/issues"
     },
     "galleryBanner": {
         "color": "#0b1929",
         "theme": "dark"
     },
     "engines": {
-        "vscode": "^1.60.0"
+        "vscode": "^1.74.0"
     },
     "categories": [
         "Themes"
@@ -46,7 +56,12 @@
         ]
     },
     "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "echo 'No compilation needed for theme extension'",
         "package": "vsce package",
         "publish": "vsce publish"
+    },
+    "devDependencies": {
+        "@vscode/vsce": "^2.22.0"
     }
 }

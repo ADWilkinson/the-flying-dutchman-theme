@@ -316,6 +316,243 @@
                 <string>#94A3B8</string>
             </dict>
         </dict>
+        <dict>
+            <key>name</key>
+            <string>JavaScript Function</string>
+            <key>scope</key>
+            <string>meta.function.js entity.name.function.js, entity.name.function.method.js</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5DADE2</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JavaScript Arrow Function</string>
+            <key>scope</key>
+            <string>storage.type.function.arrow.js</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#7AA3C1</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JavaScript Template Literal</string>
+            <key>scope</key>
+            <string>string.template.js, string.quoted.template.js</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#45B097</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>TypeScript Type</string>
+            <key>scope</key>
+            <string>entity.name.type.ts, entity.name.type.tsx, support.type.ts, support.type.tsx</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>TypeScript Interface</string>
+            <key>scope</key>
+            <string>entity.name.type.interface.ts, entity.name.type.interface.tsx</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>CSS Property</string>
+            <key>scope</key>
+            <string>support.type.property-name.css, meta.property-name.css</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#4DC1B5</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>CSS Selector</string>
+            <key>scope</key>
+            <string>entity.name.tag.css, meta.selector.css</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B87333</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>CSS Class Selector</string>
+            <key>scope</key>
+            <string>entity.other.attribute-name.class.css</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>CSS ID Selector</string>
+            <key>scope</key>
+            <string>entity.other.attribute-name.id.css</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5DADE2</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JSON Key</string>
+            <key>scope</key>
+            <string>meta.structure.dictionary.key.json string.quoted.double.json, support.type.property-name.json</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#4DC1B5</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>JSON String Value</string>
+            <key>scope</key>
+            <string>meta.structure.dictionary.value.json string.quoted.double.json</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#45B097</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Python Function</string>
+            <key>scope</key>
+            <string>entity.name.function.python, meta.function.python</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5DADE2</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Python Class</string>
+            <key>scope</key>
+            <string>entity.name.class.python</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Python Decorator</string>
+            <key>scope</key>
+            <string>entity.name.function.decorator.python</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Heading</string>
+            <key>scope</key>
+            <string>markup.heading, entity.name.section.markdown</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5DADE2</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Code</string>
+            <key>scope</key>
+            <string>markup.inline.raw, markup.raw.block</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#4DC1B5</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Bold</string>
+            <key>scope</key>
+            <string>markup.bold</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#E4B968</string>
+                <key>fontStyle</key>
+                <string>bold</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Italic</string>
+            <key>scope</key>
+            <string>markup.italic</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#7AA3C1</string>
+                <key>fontStyle</key>
+                <string>italic</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>Markdown Link</string>
+            <key>scope</key>
+            <string>markup.underline.link, meta.link</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#5DADE2</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>React/JSX Component</string>
+            <key>scope</key>
+            <string>entity.name.tag.jsx, entity.name.tag.tsx, support.class.component.jsx, support.class.component.tsx</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#B87333</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>name</key>
+            <string>YAML Key</string>
+            <key>scope</key>
+            <string>entity.name.tag.yaml</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#4DC1B5</string>
+            </dict>
+        </dict>
     </array>
     <key>uuid</key>
     <string>b0e6f3d4-8c4a-4e9f-b5c3-1234567890ab</string>

@@ -1,0 +1,21 @@
+ICON PLACEHOLDER - README
+
+You need to create an icon.png file (128x128 pixels) for your VSCode extension.
+
+Recommended design elements for The Flying Dutchman theme icon:
+- Size: 128x128 pixels (PNG format)
+- Background: Deep ocean blue (#0B1119) or transparent
+- Main element: Ship silhouette, anchor, or nautical compass
+- Accent colors: Aged brass (#D1A458) or Caribbean blue (#5DADE2)
+- Style: Minimalist, recognizable at small sizes
+
+Tools for creating the icon:
+- Figma (free web-based design tool)
+- Canva (templates available)
+- GIMP (free alternative to Photoshop)
+- Sketch (macOS)
+- Adobe Illustrator/Photoshop
+
+The icon should be saved as "icon.png" in the root directory to match the package.json reference.
+
+Alternative: You can temporarily remove the "icon" field from package.json if you want to publish without an icon first.
