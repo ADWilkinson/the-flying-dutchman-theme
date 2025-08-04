@@ -2,7 +2,7 @@
     "name": "the-flying-dutchman-theme",
     "displayName": "The Flying Dutchman Theme",
     "description": "A nautical dark theme inspired by the Flying Dutchman ghost ship. Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "publisher": "DavyJones",
     "icon": "icon.png",
     "author": {
