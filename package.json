@@ -71,9 +71,17 @@
         "vscode:prepublish": "npm run compile",
         "compile": "echo 'No compilation needed for theme extension'",
         "package": "vsce package",
-        "publish": "vsce publish"
+        "publish": "vsce publish",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:coverage": "jest --coverage"
     },
     "devDependencies": {
-        "@vscode/vsce": "^2.22.0"
+        "@vscode/vsce": "^2.22.0",
+        "@types/jest": "^29.5.12",
+        "@types/node": "^20.11.16",
+        "jest": "^29.7.0",
+        "ts-jest": "^29.1.2",
+        "typescript": "^5.3.3"
     }
 }

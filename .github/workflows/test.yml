@@ -1,0 +1,50 @@
+name: Test Theme Validation
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Run tests
+      run: npm test
+    
+    - name: Generate coverage report
+      run: npm run test:coverage
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v4
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        fail_ci_if_error: false
+        verbose: true
+    
+    - name: Validate theme structure
+      run: |
+        echo "Validating VS Code theme JSON structure..."
+        node -e "const theme = require('./themes/flying-dutchman-color-theme.json'); console.log('Theme loaded successfully:', theme.name);"
+        
+    - name: Check color consistency
+      run: |
+        echo "Checking color format consistency across platforms..."
+        npm test -- --testNamePattern="Cross-Platform"
