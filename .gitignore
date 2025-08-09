@@ -1,4 +1,17 @@
-/node_modules
+node_modules/
+*.vsix
+.vscode-test/
+dist/
+coverage/
+*.log
+.DS_Store
+Thumbs.db
+.env
+.env.local
+*.swp
+*.swo
+*~
+.idea/
+*.iml
 
 # VSCode extension builds
-*.vsix
