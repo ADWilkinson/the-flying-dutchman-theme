@@ -1,6 +1,6 @@
 {
-    "name": "The Flying Dutchman Classic",
-    "author": "Created for traditional nautical theme lovers - softer seas",
+    "name": "The Flying Dutchman Soft",
+    "author": "Created for those who prefer softer, muted nautical colors",
     "type": "dark",
     "semanticTokenColors": {
         "parameter.declaration": {
@@ -73,12 +73,10 @@
             "foreground": "#b8a6c8"
         },
         "keyword": {
-            "foreground": "#8b7ac7",
-            "fontStyle": "italic"
+            "foreground": "#8b7ac7"
         },
         "keyword.control": {
-            "foreground": "#a085d1",
-            "fontStyle": "italic"
+            "foreground": "#a085d1"
         },
         "keyword.operator": {
             "foreground": "#7ba3c4"

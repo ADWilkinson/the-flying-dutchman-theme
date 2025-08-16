@@ -1,7 +1,7 @@
 {
     "name": "the-flying-dutchman-theme",
     "displayName": "The Flying Dutchman Theme",
-    "description": "A nautical dark theme collection inspired by the Flying Dutchman ghost ship. Features three variants: Standard (balanced), High Contrast (accessibility-focused), and Classic (softer colors). Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
+    "description": "A nautical dark theme collection inspired by the Flying Dutchman ghost ship. Features three variants: Standard (balanced), High Contrast (accessibility-focused), and Soft (muted colors). Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
     "version": "1.3.0",
     "publisher": "DavyJones",
     "icon": "icon.png",
@@ -76,9 +76,9 @@
                 "path": "./themes/flying-dutchman-high-contrast.json"
             },
             {
-                "label": "The Flying Dutchman Classic",
+                "label": "The Flying Dutchman Soft",
                 "uiTheme": "vs-dark",
-                "path": "./themes/flying-dutchman-classic.json"
+                "path": "./themes/flying-dutchman-soft.json"
             }
         ],
         "configuration": {
@@ -87,11 +87,11 @@
                 "flyingDutchmanTheme.preferredVariant": {
                     "type": "string",
                     "default": "standard",
-                    "enum": ["standard", "high-contrast", "classic"],
+                    "enum": ["standard", "high-contrast", "soft"],
                     "enumDescriptions": [
                         "Balanced nautical colors for everyday coding",
                         "Enhanced contrast for better accessibility",
-                        "Softer, traditional nautical palette"
+                        "Softer, muted nautical palette for reduced eye strain"
                     ],
                     "description": "Choose your preferred Flying Dutchman theme variant"
                 },
