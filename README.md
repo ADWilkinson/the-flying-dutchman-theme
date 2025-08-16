@@ -15,7 +15,7 @@
 
 *A nautical-inspired dark theme collection for terminals and code editors, inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.*
 
-**🎨 Now featuring three distinct variants:** Standard, High Contrast, and Classic - choose the perfect nautical experience for your coding style!
+**🎨 Now featuring three distinct variants:** Standard, High Contrast, and Soft - choose the perfect nautical experience for your coding style!
 
 </div>
 
@@ -24,7 +24,7 @@
 🎨 **Three Theme Variants**
 - **Standard**: Perfect balance of nautical colors for everyday coding
 - **High Contrast**: Enhanced accessibility with stronger contrast ratios
-- **Classic**: Softer, traditional nautical palette for a calmer experience
+- **Soft**: Muted, traditional nautical palette for a calmer experience
 
 🌊 **Rich Syntax Highlighting**
 - 150+ semantic tokens for precise code coloring  
@@ -81,13 +81,13 @@ The Flying Dutchman theme now offers three distinct variants to match your codin
 - Ideal for presentations and pair programming
 - **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman High Contrast"
 
-### 🏛️ Classic
-*Softer, traditional nautical experience*
-- Muted, softer color palette with reduced saturation
-- Traditional nautical colors with a calmer feel
+### 🌫️ Soft
+*Muted, traditional nautical experience*
+- Softer color palette with reduced saturation
+- Traditional nautical colors with a gentler feel
 - Perfect for long coding sessions and reduced eye strain
 - Ideal for users preferring subtle, understated themes
-- **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman Classic"
+- **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman Soft"
 
 ### 🔧 Variant Management
 - **Quick Switch**: `Ctrl+Shift+P` → "Flying Dutchman: Switch Theme Variant"
@@ -97,23 +97,23 @@ The Flying Dutchman theme now offers three distinct variants to match your codin
 ## Theme Philosophy
 
 The Flying Dutchman theme draws inspiration from:
-- **Deep Ocean Blues**: The primary background colors echo the depths where the Dutchman sails
-- **Aged Brass & Gold**: Syntax highlighting uses warm brass tones like those found on ship instruments
-- **Sea Foam & Mist**: Variable and function colors mirror the ethereal sea spray
-- **Weathered Wood & Iron**: UI elements feature muted tones of a ship worn by centuries at sea
-- **Bioluminescent Accents**: Special highlights glow like creatures of the deep
+- **Deep Ocean Blues**: The primary background colors (#0d1117, #0b1119) echo the depths where the Dutchman sails
+- **Aged Brass & Gold**: Syntax highlighting uses warm brass tones (#d1a458) like those found on ship instruments
+- **Sea Foam & Mist**: Variable and function colors (#b0c4de, #5dade2) mirror the ethereal sea spray
+- **Weathered Elements**: UI elements feature muted tones (#94a3b8) of a ship worn by centuries at sea
+- **Bioluminescent Accents**: Special highlights (#4dc1b5) glow like creatures of the deep
 
 ## Color Palette
 
-- **Background**: Deep ocean black (#0d1117) with darker abyss tones (#0b1929)
-- **Foreground**: Misty sea spray (#a8c3d8) and aged parchment (#8b9dc3)
-- **Keywords**: Storm blue (#7fb3d5) - the color of approaching tempests
-- **Strings**: Seaweed green (#48bb78) - life clinging to the hull
+- **Background**: Deep ocean black (#0d1117) with darker abyss tones (#0b1119)
+- **Foreground**: Sea spray (#b0c4de) and aged parchment (#a8c3d8)
+- **Keywords**: Storm blue (#7aa3c1) - the color of approaching tempests
+- **Strings**: Seaweed green (#45b097) - life clinging to the hull
 - **Functions**: Caribbean blue (#5dade2) - tropical waters the ship once sailed
-- **Constants**: Aged brass (#d4af37) - the gleam of old nautical instruments
+- **Constants**: Aged brass (#d1a458) - the gleam of old nautical instruments
 - **Properties**: Turquoise (#4dc1b5) - shallow reef waters
-- **Errors**: Blood red (#e53e3e) - danger on the high seas
-- **Comments**: Fog grey (#4a5568) - whispers in the mist
+- **Errors**: Danger red (#e53e3e) - danger on the high seas
+- **Comments**: Fog grey (#546e7a) - whispers in the mist
 
 ## ⚡ Quick Install 
 
