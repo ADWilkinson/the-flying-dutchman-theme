@@ -106,19 +106,7 @@
                     "description": "Apply theme colors to integrated terminal"
                 }
             }
-        },
-        "commands": [
-            {
-                "command": "flyingDutchmanTheme.switchVariant",
-                "title": "Switch Theme Variant",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchmanTheme.showInfo",
-                "title": "Show Theme Information",
-                "category": "Flying Dutchman"
-            }
-        ]
+        }
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
