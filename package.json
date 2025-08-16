@@ -1,8 +1,8 @@
 {
     "name": "the-flying-dutchman-theme",
     "displayName": "The Flying Dutchman Theme",
-    "description": "A nautical dark theme inspired by the Flying Dutchman ghost ship. Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
-    "version": "1.2.0",
+    "description": "A nautical dark theme collection inspired by the Flying Dutchman ghost ship. Features three variants: Standard (balanced), High Contrast (accessibility-focused), and Soft (muted colors). Deep ocean blues, aged brass accents, and sea-weathered colors designed for comfortable long coding sessions. Includes comprehensive syntax highlighting for JavaScript, TypeScript, Python, React, and more. Also available for popular terminals.",
+    "version": "1.3.0",
     "publisher": "DavyJones",
     "icon": "icon.png",
     "author": {
@@ -14,6 +14,8 @@
         "theme",
         "dark theme",
         "color theme",
+        "theme variants",
+        "theme collection",
         "syntax highlighting",
         "nautical",
         "ocean",
@@ -26,6 +28,7 @@
         "blue theme",
         "accessibility",
         "high contrast",
+        "classic theme",
         "readability",
         "professional",
         "terminal theme",
@@ -38,7 +41,9 @@
         "html",
         "json",
         "markdown",
-        "productivity"
+        "productivity",
+        "multiple themes",
+        "theme suite"
     ],
     "homepage": "https://github.com/ADWilkinson/the-flying-dutchman-theme",
     "repository": {
@@ -64,6 +69,54 @@
                 "label": "The Flying Dutchman",
                 "uiTheme": "vs-dark",
                 "path": "./themes/flying-dutchman-color-theme.json"
+            },
+            {
+                "label": "The Flying Dutchman High Contrast",
+                "uiTheme": "vs-dark",
+                "path": "./themes/flying-dutchman-high-contrast.json"
+            },
+            {
+                "label": "The Flying Dutchman Soft",
+                "uiTheme": "vs-dark",
+                "path": "./themes/flying-dutchman-soft.json"
+            }
+        ],
+        "configuration": {
+            "title": "The Flying Dutchman Theme",
+            "properties": {
+                "flyingDutchmanTheme.preferredVariant": {
+                    "type": "string",
+                    "default": "standard",
+                    "enum": ["standard", "high-contrast", "soft"],
+                    "enumDescriptions": [
+                        "Balanced nautical colors for everyday coding",
+                        "Enhanced contrast for better accessibility",
+                        "Softer, muted nautical palette for reduced eye strain"
+                    ],
+                    "description": "Choose your preferred Flying Dutchman theme variant"
+                },
+                "flyingDutchmanTheme.enableSemanticHighlighting": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Enable enhanced semantic highlighting for supported languages"
+                },
+                "flyingDutchmanTheme.terminalIntegration": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Apply theme colors to integrated terminal"
+                }
+            }
+        },
+        "commands": [
+            {
+                "command": "flyingDutchmanTheme.switchVariant",
+                "title": "Switch Theme Variant",
+                "category": "Flying Dutchman"
+            },
+            {
+                "command": "flyingDutchmanTheme.showInfo",
+                "title": "Show Theme Information",
+                "category": "Flying Dutchman"
             }
         ]
     },

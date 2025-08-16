@@ -59,10 +59,34 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Icon path configuration for proper VS Code display
 
+## [1.3.0] - 2024-08-16
+
+### Added - Theme Variants System
+- **Multiple Theme Variants**: Now includes three distinct variants of The Flying Dutchman theme:
+  - **Standard**: The original balanced nautical color palette for everyday coding
+  - **High Contrast**: Enhanced accessibility variant with improved contrast ratios and bolder colors
+  - **Classic**: Softer, traditional nautical palette with more muted tones
+- **Enhanced Extension Configuration**: Advanced VS Code extension settings and commands
+- **Theme Configuration Options**: User preferences for variant selection and semantic highlighting
+- **Command Palette Integration**: Commands for switching between variants and showing theme information
+- **Improved Accessibility**: High Contrast variant specifically designed for users with visual accessibility needs
+- **Professional Flexibility**: Classic variant for users preferring softer, less saturated colors
+
+### Enhanced Features
+- **Better Discoverability**: Updated keywords and description for improved marketplace search
+- **Advanced Extension Manifest**: Complete configuration system with user preferences
+- **Theme Management Commands**: Built-in commands for theme variant switching
+- **Semantic Highlighting Toggle**: Option to enable/disable enhanced semantic highlighting
+
+### Theme Variant Details
+- **High Contrast**: Bright whites, enhanced yellows, and stronger contrast ratios (WCAG AAA where possible)
+- **Classic**: Softer blues, muted greens, and traditional nautical colors with reduced saturation
+- **Standard**: Original Flying Dutchman balance maintained as default option
+
 ## [Unreleased]
 
 ### Planned
-- Additional language-specific improvements
-- Light theme variant ("Dawn on the Horizon")
+- Light theme variant ("Dawn on the Horizon") 
 - Icon theme companion package
-- More granular customization options
+- Advanced language-specific color customizations
+- Theme variant preview system
