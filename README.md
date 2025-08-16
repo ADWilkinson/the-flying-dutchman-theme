@@ -11,38 +11,45 @@
 
 **🚢 Navigate the depths of code with colors inspired by the legendary ghost ship**
 
-[**Install from Marketplace**](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) • [**View Screenshots**](#screenshots) • [**Multi-Platform Support**](#available-for) • [**Contribute**](#-contributing)
+[**Install from Marketplace**](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) • [**View Screenshots**](#screenshots) • [**Theme Variants**](#-theme-variants) • [**Multi-Platform Support**](#available-for) • [**Contribute**](#-contributing)
 
 *A nautical-inspired dark theme collection for terminals and code editors, inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.*
+
+**🎨 Now featuring three distinct variants:** Standard, High Contrast, and Classic - choose the perfect nautical experience for your coding style!
 
 </div>
 
 ## ✨ Features
 
-🎨 **Rich Syntax Highlighting**
+🎨 **Three Theme Variants**
+- **Standard**: Perfect balance of nautical colors for everyday coding
+- **High Contrast**: Enhanced accessibility with stronger contrast ratios
+- **Classic**: Softer, traditional nautical palette for a calmer experience
+
+🌊 **Rich Syntax Highlighting**
 - 150+ semantic tokens for precise code coloring  
 - Language-specific optimizations for JavaScript, TypeScript, Python, React
 - Smart error and warning indicators with nautical flair
 
-🌊 **Nautical Design System**
+⚓ **Nautical Design System**
 - Consistent color palette across all UI elements
 - Deep ocean backgrounds reduce eye strain during long coding sessions
 - Brass and gold accents highlight important code elements
 
-⚓ **Multi-Platform Consistency**
+🔧 **Multi-Platform Consistency**
 - Available for 6 popular editors and terminals
 - Identical color schemes across all platforms  
 - Seamless workflow integration for your entire development environment
 
 ♿ **Accessibility First**
 - WCAG AA compliant contrast ratios (4.5:1 minimum)
+- High Contrast variant for enhanced accessibility (WCAG AAA where possible)
 - Colorblind-friendly design tested with accessibility tools
-- High contrast mode for enhanced visibility
 
-🔧 **Developer Experience**  
-- Optimized for marathon coding sessions
-- Clear visual hierarchy for better code comprehension
-- Professional appearance perfect for presentations and pair programming
+⚙️ **Advanced Configuration**  
+- Built-in theme variant switching commands
+- Customizable semantic highlighting preferences
+- Terminal integration settings
 
 ## 🚢 Available For
 
@@ -54,6 +61,38 @@
 | **[Windows Terminal](./windows-terminal/)** | Modern Windows terminal theme | [Add to settings.json](./windows-terminal/) |
 | **[Vim/Neovim](./vim/)** | Terminal-based editor with complete syntax support | [Copy to colors/](./vim/) |
 | **[Sublime Text](./sublime-text/)** | Cross-platform editor with TextMate grammar | [Import .tmTheme](./sublime-text/) |
+
+## 🎨 Theme Variants
+
+The Flying Dutchman theme now offers three distinct variants to match your coding preferences and accessibility needs:
+
+### 🌊 Standard (Default)
+*The original Flying Dutchman experience*
+- Balanced nautical color palette perfect for everyday coding
+- WCAG AA compliant contrast ratios
+- Ideal for most users and general development work
+- **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman"
+
+### ⚡ High Contrast  
+*Enhanced accessibility and visibility*
+- Stronger contrast ratios (WCAG AAA where possible)
+- Brighter whites and enhanced color differentiation
+- Perfect for users with visual accessibility needs
+- Ideal for presentations and pair programming
+- **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman High Contrast"
+
+### 🏛️ Classic
+*Softer, traditional nautical experience*
+- Muted, softer color palette with reduced saturation
+- Traditional nautical colors with a calmer feel
+- Perfect for long coding sessions and reduced eye strain
+- Ideal for users preferring subtle, understated themes
+- **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman Classic"
+
+### 🔧 Variant Management
+- **Quick Switch**: `Ctrl+Shift+P` → "Flying Dutchman: Switch Theme Variant"
+- **Theme Info**: `Ctrl+Shift+P` → "Flying Dutchman: Show Theme Information"
+- **Settings**: Configure preferred variant in VS Code settings under "Flying Dutchman Theme"
 
 ## Theme Philosophy
 
