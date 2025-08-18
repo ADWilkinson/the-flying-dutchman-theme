@@ -9,14 +9,17 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "moduleResolution": "node",
-    "outDir": "./dist",
-    "rootDir": "./",
-    "types": ["jest", "node"]
+    "outDir": "./out",
+    "rootDir": "./src",
+    "sourceMap": true,
+    "types": ["node", "vscode"]
   },
   "include": [
-    "tests/**/*"
+    "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "out",
+    "tests"
   ]
 }
