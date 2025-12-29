@@ -1,6 +1,6 @@
 <div align="center">
 
-# ⚓ The Flying Dutchman Theme
+# The Flying Dutchman Theme
 *A nautical dark theme collection for developers*
 
 [![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/DavyJones.the-flying-dutchman-theme?color=%23d4af37&label=Version&logo=visual-studio-code&logoColor=%23a8c3d8)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
@@ -9,87 +9,87 @@
 [![GitHub Stars](https://img.shields.io/github/stars/ADWilkinson/the-flying-dutchman-theme?color=%237fb3d5&logo=github)](https://github.com/ADWilkinson/the-flying-dutchman-theme)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**🚢 Navigate the depths of code with colors inspired by the legendary ghost ship**
+**Navigate the depths of code with colors inspired by the legendary ghost ship**
 
-[**Install from Marketplace**](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) • [**View Screenshots**](#screenshots) • [**Theme Variants**](#-theme-variants) • [**Multi-Platform Support**](#available-for) • [**Contribute**](#-contributing)
+[**Install from Marketplace**](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) | [**View Screenshots**](#screenshots) | [**Theme Variants**](#theme-variants) | [**Multi-Platform**](#available-for) | [**Contribute**](#contributing)
 
-*A nautical-inspired dark theme collection for terminals and code editors, inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.*
+A nautical-inspired dark theme collection for terminals and code editors, inspired by the legendary ghost ship and Davy Jones himself. This theme captures the mysterious atmosphere of the deep ocean, with colors reminiscent of nautical charts, aged brass instruments, and the haunting beauty of a ship sailing through eternal fog.
 
-**🎨 Now featuring three distinct variants:** Standard, High Contrast, and Soft - choose the perfect nautical experience for your coding style!
+**Now featuring three distinct variants:** Standard, High Contrast, and Soft.
 
 </div>
 
-## ✨ Features
+## Features
 
-🎨 **Three Theme Variants**
+**Three Theme Variants**
 - **Standard**: Perfect balance of nautical colors for everyday coding
 - **High Contrast**: Enhanced accessibility with stronger contrast ratios
 - **Soft**: Muted, traditional nautical palette for a calmer experience
 
-🌊 **Rich Syntax Highlighting**
-- 150+ semantic tokens for precise code coloring  
+**Rich Syntax Highlighting**
+- 150+ semantic tokens for precise code coloring
 - Language-specific optimizations for JavaScript, TypeScript, Python, React
-- Smart error and warning indicators with nautical flair
+- Smart error and warning indicators
 
-⚓ **Nautical Design System**
+**Nautical Design System**
 - Consistent color palette across all UI elements
 - Deep ocean backgrounds reduce eye strain during long coding sessions
 - Brass and gold accents highlight important code elements
 
-🔧 **Multi-Platform Consistency**
+**Multi-Platform Consistency**
 - Available for 6 popular editors and terminals
-- Identical color schemes across all platforms  
+- Identical color schemes across all platforms
 - Seamless workflow integration for your entire development environment
 
-♿ **Accessibility First**
+**Accessibility First**
 - WCAG AA compliant contrast ratios (4.5:1 minimum)
 - High Contrast variant for enhanced accessibility (WCAG AAA where possible)
 - Colorblind-friendly design tested with accessibility tools
 
-⚙️ **Advanced Configuration**  
+**Advanced Configuration**
 - Built-in theme variant switching commands
 - Customizable semantic highlighting preferences
 - Terminal integration settings
 
-## 🚢 Available For
+## Available For
 
 | Platform | Description | Installation |
 |----------|-------------|--------------|
-| **[VS Code](./themes/)** | Complete syntax highlighting theme with modern features | [One-click install](#-quick-install) |
+| **[VS Code](./themes/)** | Complete syntax highlighting theme with modern features | [One-click install](#quick-install) |
 | **[Warp Terminal](./warp/)** | Modern Rust-based terminal with comprehensive theming | [View guide](./warp/README.md) |
 | **[iTerm2](./iterm/)** | macOS terminal with full color palette support | [Import .itermcolors](./iterm/) |
 | **[Windows Terminal](./windows-terminal/)** | Modern Windows terminal theme | [Add to settings.json](./windows-terminal/) |
 | **[Vim/Neovim](./vim/)** | Terminal-based editor with complete syntax support | [Copy to colors/](./vim/) |
 | **[Sublime Text](./sublime-text/)** | Cross-platform editor with TextMate grammar | [Import .tmTheme](./sublime-text/) |
 
-## 🎨 Theme Variants
+## Theme Variants
 
-The Flying Dutchman theme now offers three distinct variants to match your coding preferences and accessibility needs:
+The Flying Dutchman theme offers three distinct variants to match your coding preferences and accessibility needs:
 
-### 🌊 Standard (Default)
-*The original Flying Dutchman experience*
+### Standard (Default)
+The original Flying Dutchman experience.
 - Balanced nautical color palette perfect for everyday coding
 - WCAG AA compliant contrast ratios
 - Ideal for most users and general development work
 - **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman"
 
-### ⚡ High Contrast  
-*Enhanced accessibility and visibility*
+### High Contrast
+Enhanced accessibility and visibility.
 - Stronger contrast ratios (WCAG AAA where possible)
 - Brighter whites and enhanced color differentiation
 - Perfect for users with visual accessibility needs
 - Ideal for presentations and pair programming
 - **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman High Contrast"
 
-### 🌫️ Soft
-*Muted, traditional nautical experience*
+### Soft
+Muted, traditional nautical experience.
 - Softer color palette with reduced saturation
 - Traditional nautical colors with a gentler feel
 - Perfect for long coding sessions and reduced eye strain
 - Ideal for users preferring subtle, understated themes
 - **Access**: `Ctrl+Shift+P` → "Preferences: Color Theme" → "The Flying Dutchman Soft"
 
-### 🔧 Variant Management
+### Variant Management
 - **Quick Switch**: `Ctrl+Shift+P` → "Flying Dutchman: Switch Theme Variant"
 - **Theme Info**: `Ctrl+Shift+P` → "Flying Dutchman: Show Theme Information"
 - **Settings**: Configure preferred variant in VS Code settings under "Flying Dutchman Theme"
@@ -115,7 +115,7 @@ The Flying Dutchman theme draws inspiration from:
 - **Errors**: Danger red (#e53e3e) - danger on the high seas
 - **Comments**: Fog grey (#546e7a) - whispers in the mist
 
-## ⚡ Quick Install 
+## Quick Install 
 
 ### Option 1: VS Code Marketplace (Recommended)
 [![Install from Marketplace](https://img.shields.io/badge/Install-VS%20Code%20Marketplace-blue?style=for-the-badge&logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
@@ -134,7 +134,7 @@ code --install-extension DavyJones.the-flying-dutchman-theme
 2. Search for `"The Flying Dutchman"` by DavyJones
 3. Click **Install** → **Reload** → Select the theme
 
-## 🖥️ Multi-Platform Installation
+## Multi-Platform Installation
 
 ### Warp Terminal (Recommended for macOS/Linux)
 ```bash
@@ -197,27 +197,27 @@ For the best experience sailing with The Flying Dutchman, consider these setting
 }
 ```
 
-## ♿ Why Choose The Flying Dutchman?
+## Why Choose The Flying Dutchman?
 
 | Feature | The Flying Dutchman | Standard Dark Themes |
 |---------|--------------------|--------------------|
-| **Eye Strain Reduction** | ✅ Deep ocean blues scientifically reduce fatigue | ❌ Harsh contrasts |
-| **Multi-Platform** | ✅ 6 editors/terminals supported | ❌ Usually single platform |
-| **Accessibility** | ✅ WCAG AA compliant contrast ratios | ❌ Often poor contrast |
-| **Cohesive Design** | ✅ Nautical theme throughout | ❌ Inconsistent styling |
-| **Active Development** | ✅ Monthly updates with community feedback | ❌ Often abandoned |
-| **Professional Quality** | ✅ 150+ semantic tokens, perfect for presentations | ❌ Basic syntax support |
+| **Eye Strain Reduction** | Deep ocean blues reduce fatigue | Often harsh contrasts |
+| **Multi-Platform** | 6 editors/terminals supported | Usually single platform |
+| **Accessibility** | WCAG AA compliant contrast ratios | Often poor contrast |
+| **Cohesive Design** | Nautical theme throughout | Inconsistent styling |
+| **Active Development** | Monthly updates with community feedback | Often abandoned |
+| **Professional Quality** | 150+ semantic tokens | Basic syntax support |
 
-## 🛠️ Technical Excellence
+## Technical Excellence
 
 - **VS Code Engine**: ^1.74.0+ (supports latest features)
 - **Color Tokens**: 150+ semantic tokens for precise highlighting
-- **Languages**: Optimized for 20+ programming languages  
+- **Languages**: Optimized for 20+ programming languages
 - **Theme Type**: Dark theme with selective high contrast elements
 - **File Size**: <50KB for instant loading
 - **Maintenance**: Actively maintained with monthly community-driven updates
 
-### 🎯 Supported Languages
+### Supported Languages
 **Frontend**: JavaScript • TypeScript • React • Vue • Angular • HTML • CSS • SCSS • LESS  
 **Backend**: Python • Node.js • PHP • Java • C# • Go • Rust • Ruby  
 **Data**: JSON • YAML • XML • SQL • GraphQL  
@@ -227,34 +227,34 @@ For the best experience sailing with The Flying Dutchman, consider these setting
 ## What's New
 
 ### Recent Updates
-- ✨ **Enhanced VSCode Theme**: Added modern features (Command Center, Sticky Scroll, Inline Chat)
-- 🔧 **Expanded Semantic Tokens**: Better TypeScript/JavaScript support with decorators, enums, interfaces
-- 🎨 **Improved Language Support**: Enhanced Sublime Text theme with comprehensive JavaScript, TypeScript, CSS, Python, JSON, and Markdown support
-- 🐛 **Color Consistency**: Fixed discrepancies between iTerm and Windows Terminal themes
-- 📚 **Better Documentation**: Complete AI development context and improved installation guides
+- **Enhanced VSCode Theme**: Added modern features (Command Center, Sticky Scroll, Inline Chat)
+- **Expanded Semantic Tokens**: Better TypeScript/JavaScript support with decorators, enums, interfaces
+- **Improved Language Support**: Enhanced Sublime Text theme with comprehensive JavaScript, TypeScript, CSS, Python, JSON, and Markdown support
+- **Color Consistency**: Fixed discrepancies between iTerm and Windows Terminal themes
+- **Better Documentation**: Complete AI development context and improved installation guides
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions from fellow sailors! Here's how you can help improve The Flying Dutchman:
+We welcome contributions! Here's how you can help improve The Flying Dutchman:
 
-### 🐛 Report Issues
+### Report Issues
 Found a bug or color inconsistency? [Open an issue](https://github.com/ADWilkinson/the-flying-dutchman-theme/issues) with:
 - Screenshots of the problem
-- Your VS Code version and operating system  
+- Your VS Code version and operating system
 - Steps to reproduce the issue
 
-### 🎨 Suggest Improvements
+### Suggest Improvements
 - Include screenshots showing current vs. desired colors
 - Explain how changes would improve the nautical theme
 - Test suggestions against accessibility standards
 
-### 📸 Contribute Screenshots
-Help expand our [screenshot gallery](#-screenshots):
+### Contribute Screenshots
+Help expand our screenshot gallery:
 - Screenshots of different programming languages
 - Terminal integrations across platforms
 - Before/after comparisons with other themes
 
-### 🛠️ Add Platform Support
+### Add Platform Support
 Want to port the theme to a new editor?
 1. Fork the repository
 2. Create a new directory (e.g., `atom/`, `emacs/`)
@@ -263,12 +263,12 @@ Want to port the theme to a new editor?
 
 See our [Contributing Guidelines](CONTRIBUTING.md) for detailed information.
 
-## ❓ Frequently Asked Questions
+## Frequently Asked Questions
 
 <details>
 <summary><strong>Why doesn't the theme look right in my terminal?</strong></summary>
 
-The VS Code theme only affects the editor interface. For terminal integration, install the appropriate terminal theme from our [multi-platform collection](#-available-for). Each terminal has its own theme file format.
+The VS Code theme only affects the editor interface. For terminal integration, install the appropriate terminal theme from our [multi-platform collection](#available-for). Each terminal has its own theme file format.
 
 </details>
 
@@ -308,14 +308,14 @@ The theme is designed to work seamlessly with popular extensions. If you notice 
 
 </details>
 
-## 🆘 Support & Community
+## Support & Community
 
-- **🐛 Bug Reports**: [GitHub Issues](https://github.com/ADWilkinson/the-flying-dutchman-theme/issues)
-- **💡 Feature Requests**: [GitHub Discussions](https://github.com/ADWilkinson/the-flying-dutchman-theme/discussions)  
-- **📖 Documentation**: This README and individual platform guides
-- **🌟 Show Your Setup**: Share screenshots in [Discussions](https://github.com/ADWilkinson/the-flying-dutchman-theme/discussions/categories/showcase)
+- **Bug Reports**: [GitHub Issues](https://github.com/ADWilkinson/the-flying-dutchman-theme/issues)
+- **Feature Requests**: [GitHub Discussions](https://github.com/ADWilkinson/the-flying-dutchman-theme/discussions)
+- **Documentation**: This README and individual platform guides
+- **Show Your Setup**: Share screenshots in [Discussions](https://github.com/ADWilkinson/the-flying-dutchman-theme/discussions/categories/showcase)
 
-## 📊 Quality Metrics
+## Quality Metrics
 
 [![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen)](https://github.com/ADWilkinson/the-flying-dutchman-theme)
 [![Accessibility](https://img.shields.io/badge/WCAG-AA%20Compliant-green)](https://webaim.org/resources/contrastchecker/)
@@ -327,7 +327,7 @@ The theme is designed to work seamlessly with popular extensions. If you notice 
 - **Updates**: Monthly releases with community feedback integration
 - **Accessibility**: Automated contrast testing in development workflow
 
-## 📜 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
@@ -335,11 +335,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 <div align="center">
 
-### ⚓ *"Part of the ship, part of the crew"*
+*"Part of the ship, part of the crew"*
 
-**May your code sail smooth waters with The Flying Dutchman theme!**
-
-*Enjoying the theme? [⭐ Star us on GitHub](https://github.com/ADWilkinson/the-flying-dutchman-theme) and [📝 leave a review](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) to help other developers discover the nautical coding experience.*
+Enjoying the theme? [Star us on GitHub](https://github.com/ADWilkinson/the-flying-dutchman-theme) and [leave a review](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme) to help other developers discover it.
 
 [![GitHub Stars](https://img.shields.io/github/stars/ADWilkinson/the-flying-dutchman-theme?style=social)](https://github.com/ADWilkinson/the-flying-dutchman-theme)
 [![VS Code Rating](https://img.shields.io/visual-studio-marketplace/r/DavyJones.the-flying-dutchman-theme)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)

@@ -1,8 +1,8 @@
-# Contributing to The Flying Dutchman Theme 🚢
+# Contributing to The Flying Dutchman Theme
 
-Welcome aboard, fellow sailor! We're excited that you want to help improve The Flying Dutchman theme collection. This guide will help you navigate the contribution process smoothly.
+Thank you for your interest in contributing to The Flying Dutchman theme collection. This guide will help you navigate the contribution process.
 
-## 🌊 Code of Conduct
+## Code of Conduct
 
 By participating in this project, you agree to abide by our nautical code of honor:
 - **Respectful Communication**: Treat all contributors with respect and professionalism
@@ -10,9 +10,9 @@ By participating in this project, you agree to abide by our nautical code of hon
 - **Collaborative Spirit**: Work together to improve the theme for all users
 - **Quality First**: Maintain high standards for accessibility and design
 
-## 🗺️ Ways to Contribute
+## Ways to Contribute
 
-### 🐛 Bug Reports
+### Bug Reports
 Help us improve by reporting issues you encounter:
 
 **Before Reporting:**
@@ -31,7 +31,7 @@ Help us improve by reporting issues you encounter:
 - Include steps to reproduce the issue
 - Specify expected vs. actual behavior
 
-### 🎨 Color Improvements
+### Color Improvements
 Suggest enhancements to our color palette:
 
 **Guidelines:**
@@ -48,7 +48,7 @@ Suggest enhancements to our color palette:
 4. Verify contrast ratios using [WebAIM Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
 5. Submit a pull request with screenshots
 
-### 📸 Screenshot Contributions
+### Screenshot Contributions
 Help expand our visual documentation:
 
 **Needed Screenshots:**
@@ -65,7 +65,7 @@ Help expand our visual documentation:
 - Save as PNG with descriptive filenames
 - Include captions explaining what's shown
 
-### 🛠️ Platform Support
+### Platform Support
 Add theme support for new editors or terminals:
 
 **Supported Platforms Process:**
@@ -83,7 +83,7 @@ Add theme support for new editors or terminals:
 - Screenshots demonstrating the theme
 - Platform-specific README in the new directory
 
-## 🎯 Development Guidelines
+## Development Guidelines
 
 ### Color Palette Standards
 All theme variants must use these exact color values:
@@ -126,7 +126,7 @@ Before submitting changes, verify:
 - [ ] Error states and warnings are clearly visible
 - [ ] Theme loads without console errors
 
-## 🚀 Submission Process
+## Submission Process
 
 ### Pull Request Guidelines
 1. **Branch Naming**: Use descriptive names
@@ -163,7 +163,7 @@ Before submitting changes, verify:
 - [ ] Documentation updated if needed
 - [ ] Screenshots provided for visual changes
 
-## 🛠️ Development Setup
+## Development Setup
 
 ### Prerequisites
 - Node.js 14+ (for package management)
@@ -195,7 +195,7 @@ Before submitting changes, verify:
    - Test with multiple file types and languages
    - Verify terminal integration if applicable
 
-## 📝 Documentation Standards
+## Documentation Standards
 
 ### README Updates
 When contributing features that affect user experience:
@@ -209,7 +209,7 @@ When contributing features that affect user experience:
 - Document any platform-specific workarounds
 - Include references to design decisions
 
-## 🎖️ Recognition
+## Recognition
 
 Contributors are recognized in several ways:
 - **Contributors List**: All contributors listed in project documentation
@@ -217,7 +217,7 @@ Contributors are recognized in several ways:
 - **Community Showcase**: Featured contributions shared on project discussions
 - **Maintainer Path**: Outstanding contributors may be invited to become maintainers
 
-## 🆘 Getting Help
+## Getting Help
 
 Need assistance with your contribution?
 
@@ -225,7 +225,7 @@ Need assistance with your contribution?
 - **Technical Issues**: [GitHub Issues](https://github.com/ADWilkinson/the-flying-dutchman-theme/issues)
 - **General Chat**: [GitHub Discussions](https://github.com/ADWilkinson/the-flying-dutchman-theme/discussions)
 
-## 📋 Contribution Checklist
+## Contribution Checklist
 
 Before submitting your contribution:
 
@@ -240,12 +240,6 @@ Before submitting your contribution:
 
 ---
 
-## ⚓ Final Words
-
-Thank you for contributing to The Flying Dutchman theme! Your efforts help create a better coding experience for developers worldwide. Whether you're fixing a small color issue or adding support for an entirely new platform, every contribution is valuable.
-
-*"Part of the ship, part of the crew"* - Welcome aboard! 🚢
-
----
+Thank you for contributing to The Flying Dutchman theme. Your efforts help create a better coding experience for developers worldwide. Whether you're fixing a small color issue or adding support for an entirely new platform, every contribution is valuable.
 
 *Need immediate help? Tag @ADWilkinson in your issue or PR for faster response.*

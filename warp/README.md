@@ -110,4 +110,4 @@ This theme is part of The Flying Dutchman theme collection and follows the same 
 
 ---
 
-*Set sail with The Flying Dutchman theme and navigate your code like a true maritime explorer!* ⚓️🏴‍☠️
+*Set sail with The Flying Dutchman theme and navigate your code like a true maritime explorer.*
