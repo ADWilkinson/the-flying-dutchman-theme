@@ -83,10 +83,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Classic**: Softer blues, muted greens, and traditional nautical colors with reduced saturation
 - **Standard**: Original Flying Dutchman balance maintained as default option
 
+## [1.4.0] - 2024-12-29
+
+### Changed
+- **Documentation Polish**: Cleaned up README, CONTRIBUTING, and platform guides for professional presentation
+- **Removed Excessive Emojis**: Streamlined documentation to use emojis sparingly and purposefully
+- **Improved Comparison Table**: Replaced emoji checkmarks with descriptive text for better accessibility
+
+### Fixed
+- **Jest Configuration**: Updated to modern ts-jest configuration format (removed deprecated globals)
+- **Vim Theme Maintainer**: Added proper maintainer attribution
+
+### Maintenance
+- Cleaned up old VSIX build artifacts
+- Improved documentation navigation links
+- Updated internal anchor references
+
 ## [Unreleased]
 
 ### Planned
-- Light theme variant ("Dawn on the Horizon") 
+- Light theme variant ("Dawn on the Horizon")
 - Icon theme companion package
 - Advanced language-specific color customizations
 - Theme variant preview system

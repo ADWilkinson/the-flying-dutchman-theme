@@ -18,12 +18,12 @@ module.exports = {
       statements: 3
     }
   },
-  globals: {
-    'ts-jest': {
+  transform: {
+    '^.+\\.ts$': ['ts-jest', {
       tsconfig: {
         types: ['jest', 'node']
       }
-    }
+    }]
   },
   moduleNameMapper: {
     '^../src/(.*)$': '<rootDir>/src/$1'

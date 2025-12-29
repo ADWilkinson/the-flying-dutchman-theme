@@ -1,6 +1,6 @@
 " The Flying Dutchman - Vim Color Scheme
 " A dark nautical theme inspired by Davy Jones and ghost ships
-" Maintainer: Your Name
+" Maintainer: Andrew Wilkinson (https://github.com/ADWilkinson)
 
 set background=dark
 highlight clear
