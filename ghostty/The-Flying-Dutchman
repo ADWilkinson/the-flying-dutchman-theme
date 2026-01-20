@@ -1,0 +1,34 @@
+# The Flying Dutchman - Ghostty Theme
+# A nautical-themed dark color scheme inspired by the legendary ghost ship
+
+# ANSI Colors (Normal)
+palette = 0=#0b1119
+palette = 1=#e85d5d
+palette = 2=#45b097
+palette = 3=#e4b968
+palette = 4=#5dade2
+palette = 5=#5c7c8a
+palette = 6=#4dc1b5
+palette = 7=#b0c4de
+
+# ANSI Colors (Bright)
+palette = 8=#546e7a
+palette = 9=#ff7575
+palette = 10=#68d391
+palette = 11=#f0d074
+palette = 12=#90cdf4
+palette = 13=#6b8a96
+palette = 14=#81e6d9
+palette = 15=#ffffff
+
+# Base Colors
+background = #0b1119
+foreground = #b0c4de
+
+# Cursor
+cursor-color = #5dade2
+cursor-text = #0b1119
+
+# Selection
+selection-background = #2b4c6f
+selection-foreground = #ffffff

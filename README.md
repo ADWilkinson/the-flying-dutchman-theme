@@ -37,7 +37,7 @@ A nautical-inspired dark theme collection for terminals and code editors, inspir
 - Brass and gold accents highlight important code elements
 
 **Multi-Platform Consistency**
-- Available for 6 popular editors and terminals
+- Available for 7 popular editors and terminals
 - Identical color schemes across all platforms
 - Seamless workflow integration for your entire development environment
 
@@ -56,6 +56,7 @@ A nautical-inspired dark theme collection for terminals and code editors, inspir
 | Platform | Description | Installation |
 |----------|-------------|--------------|
 | **[VS Code](./themes/)** | Complete syntax highlighting theme with modern features | [One-click install](#quick-install) |
+| **[Ghostty](./ghostty/)** | GPU-accelerated terminal with native theming | [Copy to themes/](./ghostty/) |
 | **[Warp Terminal](./warp/)** | Modern Rust-based terminal with comprehensive theming | [View guide](./warp/README.md) |
 | **[iTerm2](./iterm/)** | macOS terminal with full color palette support | [Import .itermcolors](./iterm/) |
 | **[Windows Terminal](./windows-terminal/)** | Modern Windows terminal theme | [Add to settings.json](./windows-terminal/) |
@@ -151,6 +152,17 @@ Then: Settings → Appearance → Themes → "The Flying Dutchman"
 3. iTerm2 → Preferences → Profiles → Colors → Color Presets → Import
 4. Select "The Flying Dutchman" from presets
 
+### Ghostty
+```bash
+mkdir -p ~/.config/ghostty/themes && \
+curl -o ~/.config/ghostty/themes/The-Flying-Dutchman \
+https://raw.githubusercontent.com/ADWilkinson/the-flying-dutchman-theme/main/ghostty/The-Flying-Dutchman
+```
+Add to your Ghostty config:
+```
+theme = The-Flying-Dutchman
+```
+
 ### Windows Terminal  
 1. Copy JSON from [`The-Flying-Dutchman.json`](./windows-terminal/The-Flying-Dutchman.json)
 2. Open Windows Terminal settings (`Ctrl+,`)
@@ -202,7 +214,7 @@ For the best experience sailing with The Flying Dutchman, consider these setting
 | Feature | The Flying Dutchman | Standard Dark Themes |
 |---------|--------------------|--------------------|
 | **Eye Strain Reduction** | Deep ocean blues reduce fatigue | Often harsh contrasts |
-| **Multi-Platform** | 6 editors/terminals supported | Usually single platform |
+| **Multi-Platform** | 7 editors/terminals supported | Usually single platform |
 | **Accessibility** | WCAG AA compliant contrast ratios | Often poor contrast |
 | **Cohesive Design** | Nautical theme throughout | Inconsistent styling |
 | **Active Development** | Monthly updates with community feedback | Often abandoned |
@@ -323,7 +335,7 @@ The theme is designed to work seamlessly with popular extensions. If you notice 
 
 - **Performance**: <50KB package size, instant theme switching
 - **Compatibility**: Tested on VS Code 1.74+ across Windows, macOS, Linux
-- **Coverage**: 150+ color tokens, 6 platforms supported
+- **Coverage**: 150+ color tokens, 7 platforms supported
 - **Updates**: Monthly releases with community feedback integration
 - **Accessibility**: Automated contrast testing in development workflow
 

@@ -1,7 +1,7 @@
 # The Flying Dutchman Theme - Development Context
 
 ## Overview
-The Flying Dutchman is a multi-editor color theme package inspired by the legendary ghost ship and maritime folklore. The project provides consistent nautical-themed dark color schemes across VSCode, iTerm, Sublime Text, Vim, and Windows Terminal, featuring deep ocean blues, aged brass accents, and bioluminescent highlights.
+The Flying Dutchman is a multi-editor color theme package inspired by the legendary ghost ship and maritime folklore. The project provides consistent nautical-themed dark color schemes across VSCode, Ghostty, iTerm, Sublime Text, Vim, and Windows Terminal, featuring deep ocean blues, aged brass accents, and bioluminescent highlights.
 
 ## Key Files and Structure
 ```
@@ -9,6 +9,8 @@ the-flying-dutchman-theme/
 ├── package.json                           # VSCode extension manifest and metadata
 ├── themes/
 │   └── flying-dutchman-color-theme.json  # Primary VSCode theme definition
+├── ghostty/
+│   └── The-Flying-Dutchman               # Ghostty terminal theme
 ├── iterm/
 │   └── The-Flying-Dutchman.itermcolors   # iTerm2 color scheme
 ├── sublime-text/
@@ -54,6 +56,7 @@ When porting the theme to a new editor:
 ### Color Token Mapping
 Each editor uses different naming conventions for syntax highlighting:
 - **VSCode**: Uses semantic tokens and TextMate scopes
+- **Ghostty**: Uses palette indices and named colors (similar to iTerm)
 - **iTerm**: Uses ANSI color indices and named colors
 - **Sublime Text**: Uses TextMate grammar scopes
 - **Vim**: Uses highlight group names
