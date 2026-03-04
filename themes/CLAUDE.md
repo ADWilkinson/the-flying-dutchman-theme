@@ -38,7 +38,7 @@ The theme uses VSCode's modern dual approach for maximum compatibility:
     "variable.declaration": "#7aa3c1",     // Variable declarations
     "variable": "#b0c4de",                 // Variable usage
     "function": "#5dade2",                 // Function names
-    "method": "#5c7c8a",                   // Method calls
+    "method": "#6b8fa0",                   // Method calls
     "type": "#d1a458",                     // Type definitions
     "class": "#d1a458",                    // Class names
     "namespace": "#d1a458"                 // Namespace identifiers
@@ -77,7 +77,7 @@ Maintains nautical theme consistency in integrated terminal:
 - **Green**: `#45b097` (success/additions)
 - **Yellow**: `#e4b968` (warnings)
 - **Blue**: `#5dade2` (information)
-- **Magenta**: `#5c7c8a` (methods/special)
+- **Magenta**: `#6b8fa0` (methods/special)
 - **Cyan**: `#4dc1b5` (properties/data)
 - **White**: `#a8c3d8` (text)
 

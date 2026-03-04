@@ -28,13 +28,13 @@
             "foreground": "#b0c4de"
         },
         "method": {
-            "foreground": "#5c7c8a"
+            "foreground": "#6b8fa0"
         },
         "method.declaration": {
-            "foreground": "#5c7c8a"
+            "foreground": "#6b8fa0"
         },
         "method.defaultLibrary": {
-            "foreground": "#4a7c7e"
+            "foreground": "#5a9c9e"
         },
         "function": {
             "foreground": "#5dade2"
@@ -43,7 +43,7 @@
             "foreground": "#5dade2"
         },
         "macro": {
-            "foreground": "#5c7c8a"
+            "foreground": "#6b8fa0"
         },
         "type": {
             "foreground": "#d1a458"
@@ -97,7 +97,7 @@
     "semanticClass": "flying-dutchman",
     "colors": {
         "foreground": "#94a3b8",
-        "descriptionForeground": "#4a7c7e",
+        "descriptionForeground": "#5a9c9e",
         "disabledForeground": "#3e4451",
         "focusBorder": "#1e3a5f",
         "errorForeground": "#e85d5d",
@@ -301,7 +301,7 @@
         "terminal.ansiGreen": "#45b097",
         "terminal.ansiYellow": "#e4b968",
         "terminal.ansiBlue": "#5dade2",
-        "terminal.ansiMagenta": "#5c7c8a",
+        "terminal.ansiMagenta": "#6b8fa0",
         "terminal.ansiCyan": "#4dc1b5",
         "terminal.ansiWhite": "#a8c3d8",
         "terminal.ansiBrightBlack": "#4a5568",
@@ -469,7 +469,7 @@
         {
             "scope": ["meta.method-call", "meta.function-call", "variable.function", "support.function.any-method"],
             "settings": {
-                "foreground": "#5c7c8a"
+                "foreground": "#6b8fa0"
             }
         },
         {

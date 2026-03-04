@@ -34,7 +34,7 @@ export class ThemeValidator {
     foreground: ['#a8c3d8', '#8b9dc3', '#94a3b8', '#b0c4de'],
     keywords: ['#7fb3d5'],
     strings: ['#48bb78'],
-    functions: ['#5dade2', '#5c7c8a', '#4a7c7e'],
+    functions: ['#5dade2', '#6b8fa0', '#5a9c9e'],
     constants: ['#d4af37', '#d1a458', '#e4b968'],
     properties: ['#4dc1b5', '#4dbdba'],
     errors: ['#e53e3e'],

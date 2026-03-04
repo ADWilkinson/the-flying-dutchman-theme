@@ -50,7 +50,7 @@ A nautical-inspired dark theme for [Warp Terminal](https://www.warp.dev/) featur
 | **Green** | `#45B097` | Sea Kelp Green |
 | **Yellow** | `#E4B968` | Treasure Gold |
 | **Blue** | `#5DADE2` | Ocean Blue |
-| **Magenta** | `#5C7C8A` | Storm Purple |
+| **Magenta** | `#6B8FA0` | Storm Purple |
 | **Cyan** | `#4DC1B5` | Seafoam Cyan |
 
 ## Features
