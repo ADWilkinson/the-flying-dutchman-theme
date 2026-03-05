@@ -69,6 +69,42 @@ export class AccessibilityValidator {
     return colors;
   }
 
+  private normalizeTokenScopes(scope: unknown): string[] {
+    if (typeof scope === 'string') {
+      return scope.split(',').map((value) => value.trim()).filter(Boolean);
+    }
+
+    if (Array.isArray(scope)) {
+      return scope
+        .filter((value): value is string => typeof value === 'string')
+        .flatMap((value) => value.split(',').map((part) => part.trim()).filter(Boolean));
+    }
+
+    return [];
+  }
+
+  findTokenColor(theme: any, scopeName: string): string | undefined {
+    if (!theme?.tokenColors || !Array.isArray(theme.tokenColors)) {
+      return undefined;
+    }
+
+    for (const tokenColor of theme.tokenColors) {
+      const scope = tokenColor?.scope;
+      const foreground = tokenColor?.settings?.foreground;
+
+      if (typeof foreground !== 'string' || !foreground.startsWith('#')) {
+        continue;
+      }
+
+      const scopes = this.normalizeTokenScopes(scope);
+      if (scopes.includes(scopeName)) {
+        return foreground;
+      }
+    }
+
+    return undefined;
+  }
+
   checkColorblindAccessibility(colors: Map<string, string>): string[] {
     const issues: string[] = [];
     
@@ -191,12 +227,12 @@ export class AccessibilityValidator {
       report.recommendations.push(...colorblindIssues);
     }
     
-    const syntaxColors = [
-      ['editor.background', '#48bb78'],
-      ['editor.background', '#7fb3d5'],
-      ['editor.background', '#5dade2'],
-      ['editor.background', '#d4af37'],
-      ['editor.background', '#e53e3e']
+    const syntaxColors: [string, string | undefined][] = [
+      ['editor.background', this.findTokenColor(theme, 'string')],
+      ['editor.background', this.findTokenColor(theme, 'keyword')],
+      ['editor.background', this.findTokenColor(theme, 'entity.name.function')],
+      ['editor.background', this.findTokenColor(theme, 'constant')],
+      ['editor.background', colors.get('editorError.foreground')]
     ];
     
     for (const [bgKey, syntaxColor] of syntaxColors) {

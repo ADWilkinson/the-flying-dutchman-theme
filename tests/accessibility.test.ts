@@ -13,6 +13,17 @@ describe('WCAG Accessibility Compliance', () => {
     theme = JSON.parse(themeContent);
   });
 
+  const requireTokenColor = (scopeName: string): string => {
+    const color = validator.findTokenColor(theme, scopeName);
+    expect(color).toBeDefined();
+
+    if (!color) {
+      throw new Error(`Missing token color for scope "${scopeName}" in theme.tokenColors`);
+    }
+
+    return color;
+  };
+
   describe('WCAG AA Compliance (4.5:1 ratio)', () => {
     test('editor text should meet AA contrast requirements', () => {
       const background = theme.colors['editor.background'];
@@ -58,7 +69,7 @@ describe('WCAG Accessibility Compliance', () => {
   describe('Syntax highlighting contrast', () => {
     test('comments should have sufficient contrast', () => {
       const background = theme.colors['editor.background'];
-      const commentColor = '#546e7a';
+      const commentColor = requireTokenColor('comment');
       
       const ratio = validator.getContrastRatio(background, commentColor);
       expect(ratio).toBeGreaterThanOrEqual(2.5); // Relaxed for fog grey nautical aesthetic
@@ -66,7 +77,7 @@ describe('WCAG Accessibility Compliance', () => {
 
     test('strings should have sufficient contrast', () => {
       const background = theme.colors['editor.background'];
-      const stringColor = '#48bb78';
+      const stringColor = requireTokenColor('string');
       
       const ratio = validator.getContrastRatio(background, stringColor);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
@@ -74,7 +85,7 @@ describe('WCAG Accessibility Compliance', () => {
 
     test('keywords should have sufficient contrast', () => {
       const background = theme.colors['editor.background'];
-      const keywordColor = '#7fb3d5';
+      const keywordColor = requireTokenColor('keyword');
       
       const ratio = validator.getContrastRatio(background, keywordColor);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
@@ -82,7 +93,7 @@ describe('WCAG Accessibility Compliance', () => {
 
     test('functions should have sufficient contrast', () => {
       const background = theme.colors['editor.background'];
-      const functionColor = '#5dade2';
+      const functionColor = requireTokenColor('entity.name.function');
       
       const ratio = validator.getContrastRatio(background, functionColor);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
@@ -90,7 +101,12 @@ describe('WCAG Accessibility Compliance', () => {
 
     test('errors should have sufficient contrast', () => {
       const background = theme.colors['editor.background'];
-      const errorColor = '#e53e3e';
+      const errorColor = theme.colors['editorError.foreground'];
+      expect(errorColor).toBeDefined();
+
+      if (!errorColor) {
+        throw new Error('Missing editorError.foreground color in theme.colors');
+      }
       
       const ratio = validator.getContrastRatio(background, errorColor);
       expect(ratio).toBeGreaterThanOrEqual(4.5);
