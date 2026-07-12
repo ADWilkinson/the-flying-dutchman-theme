@@ -1,8 +1,8 @@
 {
     "name": "the-flying-dutchman-theme",
-    "displayName": "The Flying Dutchman Theme",
-    "description": "Nautical dark theme with 3 variants: Standard, High Contrast, and Soft. Deep ocean blues, aged brass accents, and sea-weathered colors for comfortable coding. Comprehensive syntax highlighting for JS, TS, Python, React. Also available for terminals.",
-    "version": "1.4.0",
+    "displayName": "The Flying Dutchman",
+    "description": "An artisan nautical dark theme. Abyssal ocean blues, aged brass, and a bioluminescent glow — in three harmonious variants. Also ships for six terminals and editors.",
+    "version": "2.0.0",
     "publisher": "DavyJones",
     "icon": "icon.png",
     "author": {
@@ -14,36 +14,12 @@
         "theme",
         "dark theme",
         "color theme",
-        "theme variants",
-        "theme collection",
-        "syntax highlighting",
         "nautical",
         "ocean",
-        "maritime",
-        "sea",
-        "sailing",
-        "ship",
-        "flying dutchman",
-        "pirate",
-        "blue theme",
-        "accessibility",
+        "blue",
         "high contrast",
-        "classic theme",
-        "readability",
-        "professional",
-        "terminal theme",
-        "multi-platform",
-        "typescript",
-        "javascript",
-        "react",
-        "python",
-        "css",
-        "html",
-        "json",
-        "markdown",
-        "productivity",
-        "multiple themes",
-        "theme suite"
+        "italic",
+        "terminal"
     ],
     "homepage": "https://github.com/ADWilkinson/the-flying-dutchman-theme",
     "repository": {
@@ -54,7 +30,7 @@
         "url": "https://github.com/ADWilkinson/the-flying-dutchman-theme/issues"
     },
     "galleryBanner": {
-        "color": "#0b1929",
+        "color": "#0c1117",
         "theme": "dark"
     },
     "engines": {
@@ -63,10 +39,6 @@
     "categories": [
         "Themes"
     ],
-    "activationEvents": [
-        "onStartupFinished"
-    ],
-    "main": "./out/extension.js",
     "contributes": {
         "themes": [
             {
@@ -84,120 +56,16 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/flying-dutchman-soft.json"
             }
-        ],
-        "configuration": {
-            "title": "The Flying Dutchman Theme",
-            "properties": {
-                "flyingDutchmanTheme.preferredVariant": {
-                    "type": "string",
-                    "default": "standard",
-                    "enum": ["standard", "high-contrast", "soft"],
-                    "enumDescriptions": [
-                        "Balanced nautical colors for everyday coding",
-                        "Enhanced contrast for better accessibility",
-                        "Softer, muted nautical palette for reduced eye strain"
-                    ],
-                    "description": "Choose your preferred Flying Dutchman theme variant"
-                },
-                "flyingDutchmanTheme.enableSemanticHighlighting": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Enable enhanced semantic highlighting for supported languages"
-                },
-                "flyingDutchmanTheme.terminalIntegration": {
-                    "type": "boolean",
-                    "default": true,
-                    "description": "Apply theme colors to integrated terminal"
-                }
-            }
-        },
-        "commands": [
-            {
-                "command": "flyingDutchman.switchThemeVariant",
-                "title": "Switch Theme Variant",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.showThemeInfo",
-                "title": "Show Theme Information",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.switchToStandard",
-                "title": "Switch to Standard",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.switchToHighContrast",
-                "title": "Switch to High Contrast",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.switchToSoft",
-                "title": "Switch to Soft",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.toggleSemanticHighlighting",
-                "title": "Toggle Semantic Highlighting",
-                "category": "Flying Dutchman"
-            },
-            {
-                "command": "flyingDutchman.openThemeSettings",
-                "title": "Open Theme Settings",
-                "category": "Flying Dutchman"
-            }
-        ],
-        "menus": {
-            "commandPalette": [
-                {
-                    "command": "flyingDutchman.switchThemeVariant",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.showThemeInfo",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.switchToStandard",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.switchToHighContrast",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.switchToSoft",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.toggleSemanticHighlighting",
-                    "group": "themes"
-                },
-                {
-                    "command": "flyingDutchman.openThemeSettings",
-                    "group": "themes"
-                }
-            ]
-        }
+        ]
     },
     "scripts": {
-        "vscode:prepublish": "npm run compile",
-        "compile": "tsc -p ./",
-        "watch": "tsc -watch -p ./",
+        "build:themes": "node scripts/build-themes.mjs",
+        "check:themes": "node scripts/build-themes.mjs --check",
+        "vscode:prepublish": "node scripts/build-themes.mjs",
         "package": "vsce package",
-        "publish": "vsce publish",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:coverage": "jest --coverage"
+        "publish": "vsce publish"
     },
     "devDependencies": {
-        "@vscode/vsce": "^2.22.0",
-        "@types/jest": "^29.5.12",
-        "@types/node": "^20.11.16",
-        "@types/vscode": "^1.74.0",
-        "jest": "^29.7.0",
-        "ts-jest": "^29.1.2",
-        "typescript": "^5.3.3"
+        "@vscode/vsce": "^3.2.1"
     }
 }

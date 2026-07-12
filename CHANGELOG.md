@@ -1,108 +1,48 @@
 # Changelog
 
-All notable changes to "The Flying Dutchman Theme" extension will be documented in this file.
+All notable changes to The Flying Dutchman. Format based on
+[Keep a Changelog](https://keepachangelog.com/en/1.0.0/); versioning follows
+[SemVer](https://semver.org/spec/v2.0.0.html).
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## [2.0.0]
 
-## [1.0.0] - 2024-01-XX
-
-### Added
-- Initial release of The Flying Dutchman theme for VSCode
-- Complete nautical-inspired dark theme with deep ocean colors
-- Comprehensive syntax highlighting for modern languages
-- Support for semantic token colors (TypeScript, JavaScript)
-- Enhanced TextMate token colors for broad language compatibility
-- Modern VSCode features support:
-  - Command Center styling
-  - Sticky Scroll highlighting
-  - Inline Chat interface colors
-- Accessibility-focused color contrast (WCAG AA compliant)
-- Complete UI theming for all VSCode interface elements
-
-### Language Support
-- **JavaScript/TypeScript**: Full semantic highlighting with decorators, enums, interfaces
-- **React/JSX**: Component and JSX-specific color rules
-- **HTML/XML**: Tag, attribute, and content highlighting
-- **CSS**: Properties, selectors, and value highlighting
-- **JSON**: Key-value differentiation
-- **Markdown**: Headers, links, code blocks, emphasis
-- **Python**: Functions, classes, decorators
-- **Git**: Diff and status highlighting
-
-### Color Palette
-- **Background**: Deep ocean tones (#0b1119, #0b1929)
-- **Foreground**: Sea spray and mist colors (#b0c4de, #a8c3d8)
-- **Syntax**: Nautical-inspired colors (aged brass, Caribbean blue, seaweed green)
-- **UI Elements**: Ship-weathered and ocean-depth colors
-- **Terminal**: Complete 16-color ANSI palette with nautical theming
-
-### Theme Features
-- High contrast ratios for accessibility
-- Semantic token support for modern language servers
-- Comprehensive editor UI coverage
-- Terminal integration with themed ANSI colors
-- Consistent color hierarchy and visual grouping
-
-## [1.1.0] - 2024-01-XX
-
-### Added
-- Ship sail icon that perfectly matches the nautical theme
-- React/TypeScript code screenshot for marketplace preview
-- Improved marketplace description and search keywords
+A ground-up redraw for harmony and craft.
 
 ### Changed
-- Enhanced theme description with better feature highlights
-- Added more relevant keywords for discoverability
-- Maintained "DavyJones" publisher ID for consistency
 
-### Fixed
-- Icon path configuration for proper VS Code display
+- **One harmonious palette.** Every colour is now derived from a single
+  HSL-authored source (`scripts/palette.mjs`) and tuned to the same brightness,
+  so the theme reads as one weathered instrument. Functions are now a
+  bioluminescent teal instead of the old dead grey; a single coral carries tags
+  and `this`.
+- **The three variants are true tonal siblings.** High Contrast and Soft
+  previously drifted into different colour schemes (rogue purple keywords, pink
+  namespaces). They now share the Standard hues and differ only in intensity.
+- **Every editor is generated from the same palette**, so VS Code, Ghostty,
+  iTerm2, Warp, Windows Terminal, Vim/Neovim, and Sublime Text can no longer
+  drift apart. Run `npm run build:themes` to regenerate; `npm run check:themes`
+  prints a WCAG report.
+- All roles verified ≥ 4.5:1 against the editor background on all three variants.
 
-## [1.3.0] - 2024-08-16
+### Removed
 
-### Added - Theme Variants System
-- **Multiple Theme Variants**: Now includes three distinct variants of The Flying Dutchman theme:
-  - **Standard**: The original balanced nautical color palette for everyday coding
-  - **High Contrast**: Enhanced accessibility variant with improved contrast ratios and bolder colors
-  - **Classic**: Softer, traditional nautical palette with more muted tones
-- **Enhanced Extension Configuration**: Advanced VS Code extension settings and commands
-- **Theme Configuration Options**: User preferences for variant selection and semantic highlighting
-- **Command Palette Integration**: Commands for switching between variants and showing theme information
-- **Improved Accessibility**: High Contrast variant specifically designed for users with visual accessibility needs
-- **Professional Flexibility**: Classic variant for users preferring softer, less saturated colors
+- **The runtime extension.** The theme-switcher commands, the status-bar item,
+  and the configuration settings are gone. This is now a pure theme
+  contribution — no activation, no background code. Switch variants with the
+  native picker (`Ctrl/Cmd`+`K` `Ctrl/Cmd`+`T`).
+- Committed build artifacts, coverage reports, and the Jest test harness. Theme
+  correctness is now validated by `check:themes`.
 
-### Enhanced Features
-- **Better Discoverability**: Updated keywords and description for improved marketplace search
-- **Advanced Extension Manifest**: Complete configuration system with user preferences
-- **Theme Management Commands**: Built-in commands for theme variant switching
-- **Semantic Highlighting Toggle**: Option to enable/disable enhanced semantic highlighting
+## [1.4.0]
 
-### Theme Variant Details
-- **High Contrast**: Bright whites, enhanced yellows, and stronger contrast ratios (WCAG AAA where possible)
-- **Classic**: Softer blues, muted greens, and traditional nautical colors with reduced saturation
-- **Standard**: Original Flying Dutchman balance maintained as default option
+- Documentation cleanup; modern `ts-jest` configuration.
 
-## [1.4.0] - 2024-12-29
+## [1.3.0]
 
-### Changed
-- **Documentation Polish**: Cleaned up README, CONTRIBUTING, and platform guides for professional presentation
-- **Removed Excessive Emojis**: Streamlined documentation to use emojis sparingly and purposefully
-- **Improved Comparison Table**: Replaced emoji checkmarks with descriptive text for better accessibility
+- Added the High Contrast and Soft variants and the extension configuration
+  system (both reworked in 2.0.0).
 
-### Fixed
-- **Jest Configuration**: Updated to modern ts-jest configuration format (removed deprecated globals)
-- **Vim Theme Maintainer**: Added proper maintainer attribution
+## [1.0.0]
 
-### Maintenance
-- Cleaned up old VSIX build artifacts
-- Improved documentation navigation links
-- Updated internal anchor references
-
-## [Unreleased]
-
-### Planned
-- Light theme variant ("Dawn on the Horizon")
-- Icon theme companion package
-- Advanced language-specific color customizations
-- Theme variant preview system
+- Initial release: nautical dark theme for VS Code with semantic and TextMate
+  highlighting, plus terminal and editor ports.

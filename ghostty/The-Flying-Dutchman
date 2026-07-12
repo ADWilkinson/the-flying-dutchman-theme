@@ -1,34 +1,26 @@
-# The Flying Dutchman - Ghostty Theme
-# A nautical-themed dark color scheme inspired by the legendary ghost ship
+# The Flying Dutchman — Ghostty
+# Generated from scripts/palette.mjs · do not edit by hand
 
-# ANSI Colors (Normal)
-palette = 0=#0b1119
-palette = 1=#e85d5d
-palette = 2=#45b097
-palette = 3=#e4b968
-palette = 4=#5dade2
-palette = 5=#5c7c8a
-palette = 6=#4dc1b5
-palette = 7=#b0c4de
+palette = 0=#0c1117
+palette = 1=#e56661
+palette = 2=#65bd9c
+palette = 3=#e0c471
+palette = 4=#6eb5d8
+palette = 5=#c68baa
+palette = 6=#5cc4cc
+palette = 7=#bfcbd9
+palette = 8=#8a98a8
+palette = 9=#ec908d
+palette = 10=#84d2b4
+palette = 11=#e5d49e
+palette = 12=#99c9e1
+palette = 13=#d7adc3
+palette = 14=#86cfd5
+palette = 15=#e4ebf1
 
-# ANSI Colors (Bright)
-palette = 8=#546e7a
-palette = 9=#ff7575
-palette = 10=#68d391
-palette = 11=#f0d074
-palette = 12=#90cdf4
-palette = 13=#6b8a96
-palette = 14=#81e6d9
-palette = 15=#ffffff
-
-# Base Colors
-background = #0b1119
-foreground = #b0c4de
-
-# Cursor
-cursor-color = #5dade2
-cursor-text = #0b1119
-
-# Selection
-selection-background = #2b4c6f
-selection-foreground = #ffffff
+background = #131920
+foreground = #bfcbd9
+cursor-color = #5cc4cc
+cursor-text = #131920
+selection-background = #2c4459
+selection-foreground = #e4ebf1
