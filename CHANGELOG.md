@@ -4,6 +4,12 @@ All notable changes to The Flying Dutchman. Format based on
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); versioning follows
 [SemVer](https://semver.org/spec/v2.0.0.html).
 
+## [2.0.1]
+
+- Replaced the README status badges — shields.io retired its `visual-studio-marketplace`
+  endpoints (they rendered as "retired badge"). Version/installs/rating now use live
+  `vsmarketplacebadges.dev` badges in the theme's own palette colours.
+
 ## [2.0.0]
 
 A ground-up redraw for harmony and craft.

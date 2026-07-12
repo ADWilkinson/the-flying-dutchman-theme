@@ -4,9 +4,10 @@
 
 *An artisan nautical dark theme — abyssal ocean, aged brass, and a bioluminescent glow.*
 
-[![Marketplace](https://img.shields.io/visual-studio-marketplace/v/DavyJones.the-flying-dutchman-theme?color=5cc4cc&label=Marketplace&logo=visualstudiocode&logoColor=white)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
-[![Installs](https://img.shields.io/visual-studio-marketplace/i/DavyJones.the-flying-dutchman-theme?color=d3ac64&label=Installs)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
-[![License](https://img.shields.io/badge/License-MIT-e09585.svg)](LICENSE)
+[![Version](https://vsmarketplacebadges.dev/version-short/DavyJones.the-flying-dutchman-theme.svg?style=flat-square&color=5cc4cc)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
+[![Installs](https://vsmarketplacebadges.dev/installs-short/DavyJones.the-flying-dutchman-theme.svg?style=flat-square&color=d3ac64)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme)
+[![Rating](https://vsmarketplacebadges.dev/rating-short/DavyJones.the-flying-dutchman-theme.svg?style=flat-square&color=65bd9c)](https://marketplace.visualstudio.com/items?itemName=DavyJones.the-flying-dutchman-theme&ssr=false#review-details)
+[![License: MIT](https://img.shields.io/badge/license-MIT-e09585?style=flat-square)](LICENSE)
 
 ![The Flying Dutchman theme](https://raw.githubusercontent.com/ADWilkinson/the-flying-dutchman-theme/main/screenshots/hero.png)
 
