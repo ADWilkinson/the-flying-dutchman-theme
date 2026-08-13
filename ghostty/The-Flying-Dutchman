@@ -24,3 +24,4 @@ cursor-color = #5cc4cc
 cursor-text = #131920
 selection-background = #2c4459
 selection-foreground = #e4ebf1
+# cursor:repair acceptance fixture; generated check must reject this drift
