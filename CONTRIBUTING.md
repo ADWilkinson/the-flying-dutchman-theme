@@ -10,8 +10,13 @@ Every file under `themes/`, `ghostty/`, `iterm/`, `sublime-text/`, `vim/`,
 
 ```bash
 node scripts/build-themes.mjs          # regenerate every editor + variant
-node scripts/build-themes.mjs --check  # WCAG contrast report (exits non-zero on AA failure)
+node scripts/build-themes.mjs --check  # WCAG report + byte-identical generated files (read-only)
+npm test                               # clean tree passes; stale/missing generated files fail without being rewritten
 ```
+
+`--check` never creates, overwrites, or repairs generated files. It exits
+non-zero and names the path when any output is missing or does not match the
+palette and emitters exactly.
 
 There are no dependencies to install — the scripts are plain Node ESM.
 
@@ -22,8 +27,9 @@ There are no dependencies to install — the scripts are plain Node ESM.
    everywhere consistently.
 2. Run `node scripts/build-themes.mjs` and commit the regenerated files together
    with the palette change.
-3. Keep every role at **≥ 4.5:1** against its editor background (`--check` enforces
-   this). Comments and punctuation may sit at AA-large (3:1).
+3. Keep every role at **≥ 4.5:1** against its editor background (`--check`
+   enforces this, and that generated files still match). Comments and
+   punctuation may sit at AA-large (3:1).
 
 ## Adding an editor
 

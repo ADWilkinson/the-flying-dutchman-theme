@@ -69,7 +69,7 @@ can never drift apart across editors or variants:
 
 ```bash
 npm run build:themes    # regenerate all editors from scripts/palette.mjs
-npm run check:themes     # print the WCAG contrast report
+npm run check:themes     # WCAG report; committed files must match the palette (read-only)
 ```
 
 To adjust a colour, edit [`scripts/palette.mjs`](scripts/palette.mjs) and rebuild —
