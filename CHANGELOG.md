@@ -9,6 +9,8 @@ All notable changes to The Flying Dutchman. Format based on
 - `npm run check:themes` now also verifies every generated theme file matches
   the palette and emitters byte-for-byte. Check mode is read-only: it names
   missing or stale files and does not rewrite them.
+- Pointed the README Galleon attribution at https://galleonlabs.io (the old
+  `/fleet/flying-dutchman` path 404ed).
 
 ## [2.0.1]
 

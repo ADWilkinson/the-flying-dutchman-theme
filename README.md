@@ -82,5 +82,5 @@ MIT — see [LICENSE](LICENSE).
 <div align="center">
 <sub><i>"Part of the ship, part of the crew."</i></sub>
 
-<sub><a href="https://galleonlabs.io/fleet/flying-dutchman">by Galleon</a></sub>
+<sub><a href="https://galleonlabs.io">by Galleon Labs</a></sub>
 </div>
