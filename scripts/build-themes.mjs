@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 // Build every editor theme from the master palette.
 // Usage: node scripts/build-themes.mjs [--check]
-//   --check  print a WCAG contrast report and exit non-zero on AA failures
+//   --check  print a WCAG contrast report and verify committed outputs match
+//            the palette/emitters. Read-only: never writes or repairs files.
+//            Exits non-zero on AA failures or stale/missing generated files.
 
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync, existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { palette, variants } from './palette.mjs';
@@ -66,21 +68,49 @@ function report() {
   return failures;
 }
 
-// --- build --------------------------------------------------------------
-function build() {
-  const written = [];
+// --- artifacts ----------------------------------------------------------
+// One in-memory list drives both write and check so they cannot diverge.
+function artifacts() {
+  const out = [];
   for (const v of variants) {
-    written.push(write(FILE[v], json(vscodeTheme(DISPLAY[v], palette(v)))));
+    out.push([FILE[v], json(vscodeTheme(DISPLAY[v], palette(v)))]);
   }
   const std = palette('standard');
   const name = 'The Flying Dutchman';
-  written.push(write('ghostty/The-Flying-Dutchman', ghostty(std)));
-  written.push(write('warp/the-flying-dutchman.yaml', warp(name, std)));
-  written.push(write('windows-terminal/The-Flying-Dutchman.json', json(windowsTerminal(name, std))));
-  written.push(write('iterm/The-Flying-Dutchman.itermcolors', iterm(std)));
-  written.push(write('vim/colors/flying-dutchman.vim', vim(std)));
-  written.push(write('sublime-text/The-Flying-Dutchman.tmTheme', sublime(name, std)));
-  return written;
+  out.push(['ghostty/The-Flying-Dutchman', ghostty(std)]);
+  out.push(['warp/the-flying-dutchman.yaml', warp(name, std)]);
+  out.push(['windows-terminal/The-Flying-Dutchman.json', json(windowsTerminal(name, std))]);
+  out.push(['iterm/The-Flying-Dutchman.itermcolors', iterm(std)]);
+  out.push(['vim/colors/flying-dutchman.vim', vim(std)]);
+  out.push(['sublime-text/The-Flying-Dutchman.tmTheme', sublime(name, std)]);
+  return out;
+}
+
+function build() {
+  return artifacts().map(([rel, contents]) => write(rel, contents));
+}
+
+// Read-only: compare committed files to the in-memory expected output.
+// Never creates, overwrites, or repairs anything on disk.
+function checkArtifacts() {
+  const missing = [];
+  const stale = [];
+  for (const [rel, contents] of artifacts()) {
+    const path = resolve(root, rel);
+    if (!existsSync(path)) {
+      missing.push(rel);
+      continue;
+    }
+    let actual;
+    try {
+      actual = readFileSync(path);
+    } catch {
+      stale.push(rel);
+      continue;
+    }
+    if (!actual.equals(Buffer.from(contents))) stale.push(rel);
+  }
+  return { missing, stale };
 }
 
 const checkOnly = process.argv.includes('--check');
@@ -89,7 +119,22 @@ if (!checkOnly) {
   console.log('Wrote:');
   for (const f of written) console.log(`  ${f}`);
 }
+
+let drift = 0;
+if (checkOnly) {
+  const { missing, stale } = checkArtifacts();
+  if (missing.length || stale.length) {
+    drift = 1;
+    console.log('Generated outputs do not match the palette and emitters:');
+    for (const f of missing) console.log(`  missing  ${f}`);
+    for (const f of stale) console.log(`  stale    ${f}`);
+    console.log('\nRun `npm run build:themes` to regenerate, then commit the result.');
+  } else {
+    console.log(`All ${artifacts().length} generated file(s) match the palette and emitters.`);
+  }
+}
+
 console.log('\nWCAG contrast (syntax & text vs editor background):');
 const failures = report();
 console.log(`\n${failures === 0 ? 'All roles pass their WCAG target.' : `${failures} role(s) below target.`}`);
-process.exit(checkOnly && failures ? 1 : 0);
+process.exit(checkOnly && (failures || drift) ? 1 : 0);

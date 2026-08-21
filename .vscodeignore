@@ -14,6 +14,7 @@ warp/
 windows-terminal/
 
 # Repo / dev files
+test/
 .git/
 .gitignore
 .github/

@@ -69,7 +69,7 @@ can never drift apart across editors or variants:
 
 ```bash
 npm run build:themes    # regenerate all editors from scripts/palette.mjs
-npm run check:themes     # print the WCAG contrast report
+npm run check:themes     # WCAG report; committed files must match the palette (read-only)
 ```
 
 To adjust a colour, edit [`scripts/palette.mjs`](scripts/palette.mjs) and rebuild —
@@ -82,5 +82,5 @@ MIT — see [LICENSE](LICENSE).
 <div align="center">
 <sub><i>"Part of the ship, part of the crew."</i></sub>
 
-<sub><a href="https://galleonlabs.io/fleet/flying-dutchman">by Galleon</a></sub>
+<sub><a href="https://galleonlabs.io">by Galleon Labs</a></sub>
 </div>

@@ -4,6 +4,14 @@ All notable changes to The Flying Dutchman. Format based on
 [Keep a Changelog](https://keepachangelog.com/en/1.0.0/); versioning follows
 [SemVer](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+- `npm run check:themes` now also verifies every generated theme file matches
+  the palette and emitters byte-for-byte. Check mode is read-only: it names
+  missing or stale files and does not rewrite them.
+- Pointed the README Galleon attribution at https://galleonlabs.io (the old
+  `/fleet/flying-dutchman` path 404ed).
+
 ## [2.0.1]
 
 - Replaced the README status badges — shields.io retired its `visual-studio-marketplace`
