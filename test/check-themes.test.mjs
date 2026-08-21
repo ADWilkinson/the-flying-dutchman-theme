@@ -55,8 +55,9 @@ test('generated-artifact check', async (t) => {
     const before = snapshot();
     const result = runCheck();
     assert.equal(result.status, 0, result.stdout + result.stderr);
-    assert.match(result.stdout, /match the palette and emitters/);
+    assert.match(result.stdout, /All 9 generated file\(s\) match the palette and emitters/);
     assert.match(result.stdout, /WCAG contrast/);
+    assert.doesNotMatch(result.stdout, /Wrote:/);
     assertSnapshotEqual(before, snapshot(), 'check mode must not rewrite a clean tree');
   });
 
@@ -71,6 +72,8 @@ test('generated-artifact check', async (t) => {
       const result = runCheck();
       assert.notEqual(result.status, 0);
       assert.match(`${result.stdout}\n${result.stderr}`, /stale\s+ghostty\/The-Flying-Dutchman/);
+      assert.match(`${result.stdout}\n${result.stderr}`, /WCAG contrast/);
+      assert.doesNotMatch(result.stdout, /Wrote:/);
       assertSnapshotEqual(before, snapshot(), 'check mode must not repair a stale file');
       assert.ok(readFileSync(target).equals(drifted));
     } finally {
@@ -88,6 +91,8 @@ test('generated-artifact check', async (t) => {
       const result = runCheck();
       assert.notEqual(result.status, 0);
       assert.match(`${result.stdout}\n${result.stderr}`, /missing\s+warp\/the-flying-dutchman.yaml/);
+      assert.match(`${result.stdout}\n${result.stderr}`, /WCAG contrast/);
+      assert.doesNotMatch(result.stdout, /Wrote:/);
       assert.equal(existsSync(target), false, 'check mode must not recreate a missing file');
       assertSnapshotEqual(before, snapshot(), 'check mode must not create missing files');
     } finally {
