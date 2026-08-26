@@ -6,6 +6,8 @@ All notable changes to The Flying Dutchman. Format based on
 
 ## [Unreleased]
 
+## [2.0.2]
+
 - `npm run check:themes` now also verifies every generated theme file matches
   the palette and emitters byte-for-byte. Check mode is read-only: it names
   missing or stale files and does not rewrite them.
@@ -13,6 +15,9 @@ All notable changes to The Flying Dutchman. Format based on
   `/fleet/flying-dutchman` path 404ed).
 
 ## [2.0.1]
+
+Recorded here but never published to the Marketplace, which served 2.0.0 from
+2026-07-12; the badge fix below reaches users in 2.0.2.
 
 - Replaced the README status badges — shields.io retired its `visual-studio-marketplace`
   endpoints (they rendered as "retired badge"). Version/installs/rating now use live
