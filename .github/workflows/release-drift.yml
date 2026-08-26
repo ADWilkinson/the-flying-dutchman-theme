@@ -1,0 +1,30 @@
+name: Release drift
+
+# Warns when package.json and the served Marketplace listing disagree. Deliberately
+# separate from `Check themes`: that check is the deterministic, offline gate on a PR,
+# and a gallery outage must never be able to block a merge. This one only reports.
+on:
+  push:
+    branches: [main]
+  schedule:
+    # A listing goes stale without any commit, so a push trigger alone would miss it.
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-drift
+  cancel-in-progress: true
+
+jobs:
+  drift:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # No install: the script is plain Node ESM with no dependencies.
+      - run: node scripts/check-published.mjs

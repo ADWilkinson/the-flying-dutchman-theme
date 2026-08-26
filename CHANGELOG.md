@@ -6,6 +6,12 @@ All notable changes to The Flying Dutchman. Format based on
 
 ## [Unreleased]
 
+- Added `npm run check:published`, which compares `package.json` against the
+  version the Marketplace actually serves. A new `Release drift` workflow runs it
+  on every push to `main` and weekly, so a merged-but-unpublished fix reports
+  itself instead of sitting silently — 2.0.1 went six weeks without reaching a
+  single user. It only warns; an unreachable gallery cannot block a merge.
+
 ## [2.0.2]
 
 - `npm run check:themes` now also verifies every generated theme file matches

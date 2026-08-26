@@ -61,7 +61,8 @@
     "scripts": {
         "build:themes": "node scripts/build-themes.mjs",
         "check:themes": "node scripts/build-themes.mjs --check",
-        "test": "node --test test/check-themes.test.mjs",
+        "check:published": "node scripts/check-published.mjs",
+        "test": "node --test \"test/*.test.mjs\"",
         "vscode:prepublish": "node scripts/build-themes.mjs",
         "package": "vsce package",
         "publish": "vsce publish"

@@ -18,6 +18,10 @@ npm test                               # clean tree passes; stale/missing genera
 non-zero and names the path when any output is missing or does not match the
 palette and emitters exactly.
 
+`node scripts/check-published.mjs` is separate: it asks the Marketplace what it
+actually serves and warns when `package.json` has moved ahead. It never fails a
+build — add `--strict` to turn it into a post-publish readback.
+
 There are no dependencies to install — the scripts are plain Node ESM.
 
 ## Changing a colour

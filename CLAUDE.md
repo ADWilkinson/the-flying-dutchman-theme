@@ -49,3 +49,10 @@ package.json       # pure theme contribution (contributes.themes only)
 `npm run package` builds the `.vsix` (prepublish regenerates themes first);
 `npm run publish` pushes to the VS Code Marketplace under the `DavyJones`
 publisher. Bump `version` in `package.json` and add a `CHANGELOG.md` entry first.
+
+Merging is not shipping. `npm run check:published` reports whether the listing
+actually serves what `package.json` claims; the `Release drift` workflow runs it
+on every push to `main` and weekly and warns without ever blocking a merge. After
+publishing, read it back with `npm run check:published -- --strict`, which exits
+non-zero until the gallery serves the current version (allow ~15 min for CDN
+propagation).
