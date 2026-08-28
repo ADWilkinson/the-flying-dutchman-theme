@@ -685,8 +685,13 @@ export function vim(p) {
     H('diffAdded', p.green, null),
     H('diffRemoved', p.error, null),
     '',
+    // Parity with the VS Code `variable.language` rule and Sublime's `This`:
+    // `this`/`self` carry the coral role. Vim has no builtin group for it, so
+    // this is the Neovim treesitter name; Vim 9 accepts it as an inert group.
     '" this / self',
-    H('Boolean', p.constant, null),
+    H('@variable.builtin', p.coral, null, 'italic'),
+    '',
+    '" Markdown',
     H('markdownH1', p.func, null, 'bold'),
     H('markdownH2', p.func, null, 'bold'),
     H('markdownCode', p.property, null),

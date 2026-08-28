@@ -8,6 +8,15 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- The Vim / Neovim port never coloured `this` / `self`. Its `" this / self"`
+  section re-emitted `Boolean` instead, so the coral role that VS Code
+  (`variable.language`) and Sublime (the `This` rule) both ship was missing, and
+  `Boolean` was defined twice — the second definition silently overrode the
+  first. The port now emits `@variable.builtin` in coral italic, and a new test
+  pins cross-port parity and rejects any duplicate `highlight` group;
+  `check:themes` could only prove the committed bytes matched the emitter, so a
+  wrong mapping round-tripped clean. Broken since the 2.0 redraw.
+
 - The Sublime Text port was not valid XML and would not load. The rule names
   `Number & Constant` and `Type & Class` wrote a bare `&` into the `.tmTheme`,
   which every plist parser rejects; it has been broken since the 2.0 redraw.
