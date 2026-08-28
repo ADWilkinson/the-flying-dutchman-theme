@@ -8,6 +8,14 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- The Vim / Neovim port raised an error on every `:colorscheme flying-dutchman`
+  in Vim. The `this` / `self` fix below emitted the Neovim treesitter group
+  `@variable.builtin` unguarded, and Vim only accepts `[A-Za-z0-9_]` in a group
+  name, so Vim 9.1 answered `W18: Invalid character in group name`. The group is
+  now wrapped in `if has('nvim')`: Neovim keeps the coral role, Vim loads
+  silently, and a new test rejects any group name Vim would parse and refuse.
+  Neovim was never affected.
+
 - The Vim / Neovim port never coloured `this` / `self`. Its `" this / self"`
   section re-emitted `Boolean` instead, so the coral role that VS Code
   (`variable.language`) and Sublime (the `This` rule) both ship was missing, and
