@@ -687,9 +687,15 @@ export function vim(p) {
     '',
     // Parity with the VS Code `variable.language` rule and Sublime's `This`:
     // `this`/`self` carry the coral role. Vim has no builtin group for it, so
-    // this is the Neovim treesitter name; Vim 9 accepts it as an inert group.
-    '" this / self',
-    H('@variable.builtin', p.coral, null, 'italic'),
+    // this is the Neovim treesitter name — and Vim does not accept it: group
+    // names are `[A-Za-z0-9_]` only, so a bare `@variable.builtin` raises
+    // `W18: Invalid character in group name` on every `:colorscheme`. Guarding
+    // it keeps the role in Neovim and keeps Vim silent; Vim has no portable
+    // group for this/self, so there it stays the plain `Identifier` colour.
+    '" this / self (Neovim only — Vim rejects `@` in a group name)',
+    "if has('nvim')",
+    '  ' + H('@variable.builtin', p.coral, null, 'italic'),
+    'endif',
     '',
     '" Markdown',
     H('markdownH1', p.func, null, 'bold'),

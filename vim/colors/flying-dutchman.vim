@@ -106,8 +106,10 @@ highlight DiffText guifg=#6eb5d8 guibg=#202832 gui=NONE
 highlight diffAdded guifg=#5fc491 guibg=NONE gui=NONE
 highlight diffRemoved guifg=#e56661 guibg=NONE gui=NONE
 
-" this / self
-highlight @variable.builtin guifg=#e09585 guibg=NONE gui=italic
+" this / self (Neovim only — Vim rejects `@` in a group name)
+if has('nvim')
+  highlight @variable.builtin guifg=#e09585 guibg=NONE gui=italic
+endif
 
 " Markdown
 highlight markdownH1 guifg=#5cc4cc guibg=NONE gui=bold
