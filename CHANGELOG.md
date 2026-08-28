@@ -6,6 +6,17 @@ All notable changes to The Flying Dutchman. Format based on
 
 ## [Unreleased]
 
+### Fixed
+
+- The Sublime Text port was not valid XML and would not load. The rule names
+  `Number & Constant` and `Type & Class` wrote a bare `&` into the `.tmTheme`,
+  which every plist parser rejects; it has been broken since the 2.0 redraw.
+  The plist emitters now escape interpolated text, and a new test parses the
+  generated `.tmTheme` and `.itermcolors` for well-formedness — `check:themes`
+  alone could only prove the committed bytes matched the emitters, so a
+  malformed artifact round-tripped clean. Only the repo-served port changed;
+  the `.vsix` never contained these files.
+
 - Added `npm run check:published`, which compares `package.json` against the
   version the Marketplace actually serves. A new `Release drift` workflow runs it
   on every push to `main` and weekly, so a merged-but-unpublished fix reports

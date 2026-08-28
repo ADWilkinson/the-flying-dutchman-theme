@@ -516,6 +516,18 @@ export function windowsTerminal(name, p) {
 }
 
 // ---------------------------------------------------------------------------
+// plist emitters (.itermcolors, .tmTheme)
+// ---------------------------------------------------------------------------
+
+// Both plist formats are real XML, parsed by real XML parsers. Any text we
+// interpolate is a text node, so the three markup characters have to be
+// entities or the file will not parse at all. Rule names like "Number &
+// Constant" shipped a bare `&` and broke the whole .tmTheme.
+function xml(text) {
+  return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+}
+
+// ---------------------------------------------------------------------------
 // iTerm2 (.itermcolors plist — sRGB components)
 // ---------------------------------------------------------------------------
 
@@ -553,7 +565,7 @@ export function iterm(p) {
   entries['Cursor Guide Color'] = p.bgLine;
   entries['Badge Color'] = p.coral;
   const body = Object.entries(entries)
-    .map(([k, hex]) => `	<key>${k}</key>\n${itermColor(hex)}`)
+    .map(([k, hex]) => `	<key>${xml(k)}</key>\n${itermColor(hex)}`)
     .join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
@@ -695,9 +707,9 @@ function sublimeRule(name, scope, fg, fontStyle) {
   if (fontStyle) settings.push(`			<key>fontStyle</key>\n			<string>${fontStyle}</string>`);
   return `		<dict>
 			<key>name</key>
-			<string>${name}</string>
+			<string>${xml(name)}</string>
 			<key>scope</key>
-			<string>${scope}</string>
+			<string>${xml(scope)}</string>
 			<key>settings</key>
 			<dict>
 ${settings.join('\n')}
@@ -738,7 +750,7 @@ export function sublime(name, p) {
 <plist version="1.0">
 <dict>
 	<key>name</key>
-	<string>${name}</string>
+	<string>${xml(name)}</string>
 	<key>settings</key>
 	<array>
 		<dict>
