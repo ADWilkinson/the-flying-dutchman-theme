@@ -107,7 +107,9 @@ highlight diffAdded guifg=#5fc491 guibg=NONE gui=NONE
 highlight diffRemoved guifg=#e56661 guibg=NONE gui=NONE
 
 " this / self
-highlight Boolean guifg=#e0c471 guibg=NONE gui=NONE
+highlight @variable.builtin guifg=#e09585 guibg=NONE gui=italic
+
+" Markdown
 highlight markdownH1 guifg=#5cc4cc guibg=NONE gui=bold
 highlight markdownH2 guifg=#5cc4cc guibg=NONE gui=bold
 highlight markdownCode guifg=#8bc0d0 guibg=NONE gui=NONE
