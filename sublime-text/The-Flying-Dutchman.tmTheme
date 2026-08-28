@@ -72,7 +72,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Number & Constant</string>
+			<string>Number &amp; Constant</string>
 			<key>scope</key>
 			<string>constant.numeric, constant.language, constant, support.constant</string>
 			<key>settings</key>
@@ -116,7 +116,7 @@
 		</dict>
 		<dict>
 			<key>name</key>
-			<string>Type & Class</string>
+			<string>Type &amp; Class</string>
 			<key>scope</key>
 			<string>entity.name.type, entity.name.class, support.type, support.class, entity.other.inherited-class</string>
 			<key>settings</key>
