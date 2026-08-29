@@ -16,6 +16,11 @@ windows-terminal/
 # Repo / dev files
 test/
 .git/
+# Agent worktrees. vsce never reads .gitignore, and these are ignored here only
+# by a machine-local global gitignore — so without this an agent scratch tree
+# present at publish time ships a second copy of the whole repo to users.
+.worktrees/
+.claude/
 .gitignore
 .github/
 CLAUDE.md

@@ -8,6 +8,15 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- `vsce package` shipped a second copy of the whole repository when an agent
+  worktree was present. `.vscodeignore` did not name `.worktrees/`, and `vsce`
+  reads only that file — never `.gitignore` — so a scratch tree that `git
+  status` reports as clean (it is ignored by a machine-local global gitignore)
+  turned a 9-file / 30 KB vsix into 35 files / 340 KB, including `CLAUDE.md`,
+  `.github/`, `scripts/` and every terminal port. `.worktrees/` and `.claude/`
+  are now excluded, and a new test asserts the packaged payload is exactly the
+  seven files a user should receive, with a scratch worktree planted in the tree.
+
 - 29 workbench colours were never set, so VS Code filled them from its own
   registry defaults instead of the palette — and those defaults are hard-coded
   literals, not derivations of the theme. The Command Palette drew its group

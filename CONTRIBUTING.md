@@ -22,7 +22,9 @@ palette and emitters exactly.
 actually serves and warns when `package.json` has moved ahead. It never fails a
 build — add `--strict` to turn it into a post-publish readback.
 
-There are no dependencies to install — the scripts are plain Node ESM.
+The scripts under `scripts/` are plain Node ESM with no dependencies. `npm test`
+does need `npm ci` first: the packaging test runs `vsce ls` to assert the vsix
+ships exactly the seven files a user should receive.
 
 ## Changing a colour
 
