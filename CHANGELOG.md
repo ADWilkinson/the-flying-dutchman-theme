@@ -8,6 +8,17 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- 29 workbench colours were never set, so VS Code filled them from its own
+  registry defaults instead of the palette — and those defaults are hard-coded
+  literals, not derivations of the theme. The Command Palette drew its group
+  labels in stock `#3794FF`, the code-action bulb in stock `#FFCC00`, the error
+  activity badge in `#F14C4C`, and inlay hints in `#969696`, straight through a
+  palette whose whole rule is that nothing shouts. All 29 now resolve to a
+  palette role in all three variants, and a new test pins the audited list so a
+  future VS Code colour cannot quietly reopen the gap. `check:themes` could not
+  see this: it proves the committed bytes match the emitter, and a key the
+  emitter never writes matches perfectly.
+
 - The Vim / Neovim port raised an error on every `:colorscheme flying-dutchman`
   in Vim. The `this` / `self` fix below emitted the Neovim treesitter group
   `@variable.builtin` unguarded, and Vim only accepts `[A-Za-z0-9_]` in a group
