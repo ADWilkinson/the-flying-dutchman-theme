@@ -111,13 +111,18 @@ function workbench(p) {
     'errorForeground': p.error,
     'descriptionForeground': p.fgMuted,
     'disabledForeground': p.fgFaint,
+    'strongForeground': p.fgBright,
 
     // Text / links
     'textLink.foreground': p.info,
     'textLink.activeForeground': p.func,
     'textPreformat.foreground': p.property,
+    'textPreformat.background': p.bgPanel,
     'textBlockQuote.background': p.bgPanel,
+    // Markdown quotes read as fgDim in the token colours; keep the bar the same.
+    'textBlockQuote.border': p.fgDim,
     'textCodeBlock.background': p.bgPanel,
+    'textSeparator.foreground': p.borderSubtle,
 
     // Buttons & badges
     'button.background': p.func,
@@ -130,6 +135,10 @@ function workbench(p) {
     'badge.foreground': p.bgChrome,
     'activityBarBadge.background': p.func,
     'activityBarBadge.foreground': p.bgChrome,
+    'activityErrorBadge.background': p.error,
+    'activityErrorBadge.foreground': p.bgChrome,
+    'activityWarningBadge.background': p.warn,
+    'activityWarningBadge.foreground': p.bgChrome,
     'progressBar.background': p.func,
 
     // Inputs & dropdowns
@@ -137,6 +146,7 @@ function workbench(p) {
     'input.foreground': p.fg,
     'input.border': p.borderSubtle,
     'input.placeholderForeground': p.fgDim,
+    'inputOption.hoverBackground': p.bgHover,
     'inputOption.activeForeground': p.bgChrome,
     'inputOption.activeBackground': p.func,
     'inputOption.activeBorder': p.func,
@@ -172,12 +182,18 @@ function workbench(p) {
     'editor.hoverHighlightBackground': a(p.func, 0x22),
     'editor.lineHighlightBackground': p.bgLine,
     'editor.rangeHighlightBackground': a(p.bgSel, 0x44),
+    'editor.snippetTabstopHighlightBackground': a(p.bgSel, 0x66),
+    'editor.snippetFinalTabstopHighlightBorder': p.func,
+    'editor.compositionBorder': p.func,
     'editorLink.activeForeground': p.info,
     'editorWhitespace.foreground': p.fgFaint,
     'editorIndentGuide.background1': p.borderSubtle,
     'editorIndentGuide.activeBackground1': p.border,
     'editorRuler.foreground': p.borderSubtle,
     'editorCodeLens.foreground': p.fgDim,
+    'editorInlayHint.foreground': p.fgDim,
+    'editorLightBulb.foreground': p.constant,
+    'editorLightBulbAutoFix.foreground': p.func,
     'editorBracketMatch.background': a(p.func, 0x22),
     'editorBracketMatch.border': p.func,
     'editorBracketHighlight.foreground1': p.constant,
@@ -200,6 +216,7 @@ function workbench(p) {
     // Overview ruler
     'editorOverviewRuler.border': p.bgChrome,
     'editorOverviewRuler.findMatchForeground': p.constant,
+    'editorOverviewRuler.selectionHighlightForeground': a(p.func, 0x66),
     'editorOverviewRuler.modifiedForeground': p.info,
     'editorOverviewRuler.addedForeground': p.green,
     'editorOverviewRuler.deletedForeground': p.error,
@@ -208,6 +225,7 @@ function workbench(p) {
     'editorOverviewRuler.infoForeground': p.info,
 
     // Gutter / minimap
+    'minimap.errorHighlight': a(p.error, 0xb3),
     'minimapGutter.modifiedBackground': p.info,
     'minimapGutter.addedBackground': p.green,
     'minimapGutter.deletedBackground': p.error,
@@ -256,7 +274,11 @@ function workbench(p) {
     'list.dropBackground': p.bgSelMuted,
     'list.errorForeground': p.error,
     'list.warningForeground': p.warn,
+    'list.deemphasizedForeground': p.fgDim,
+    'list.invalidItemForeground': p.warn,
+    'listFilterWidget.noMatchesOutline': p.error,
     'tree.indentGuidesStroke': p.borderSubtle,
+    'tree.tableColumnsBorder': p.borderSubtle,
 
     // Scrollbar
     'scrollbar.shadow': '#00000000',
@@ -303,6 +325,12 @@ function workbench(p) {
     'commandCenter.activeBackground': p.bgHover,
     'commandCenter.border': p.borderSubtle,
     'commandCenter.inactiveForeground': p.fgDim,
+
+    // Quick pick (command palette, Go to File). pickerGroup.* is the one place a
+    // stock VS Code blue would otherwise land in the middle of the palette.
+    'quickInputTitle.background': p.bgPanel,
+    'pickerGroup.foreground': p.func,
+    'pickerGroup.border': p.borderSubtle,
 
     // Widgets (suggest / hover / peek)
     'editorWidget.background': p.bgElev,
@@ -374,6 +402,8 @@ function workbench(p) {
     'diffEditor.removedTextBackground': a(p.error, 0x22),
     'diffEditor.insertedLineBackground': a(p.green, 0x18),
     'diffEditor.removedLineBackground': a(p.error, 0x18),
+    'diffEditor.diagonalFill': p.borderSubtle,
+    'diffEditor.unchangedCodeBackground': a(p.fgFaint, 0x33),
     'merge.currentHeaderBackground': a(p.info, 0x66),
     'merge.currentContentBackground': a(p.info, 0x33),
     'merge.incomingHeaderBackground': a(p.green, 0x66),
@@ -413,6 +443,9 @@ function workbench(p) {
     'charts.orange': p.warn,
     'charts.red': p.error,
     'charts.purple': p.magenta,
+    'chart.line': p.info,
+    'chart.axis': a(p.fgMuted, 0x66),
+    'chart.guide': a(p.fgMuted, 0x33),
   };
 }
 
