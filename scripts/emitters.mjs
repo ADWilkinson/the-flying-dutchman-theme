@@ -450,7 +450,7 @@ function workbench(p) {
 }
 
 function ansiColors(p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   return {
     'terminal.ansiBlack': c.black,
     'terminal.ansiRed': c.red,
@@ -476,7 +476,7 @@ function ansiColors(p) {
 // ---------------------------------------------------------------------------
 
 export function ghostty(p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   const order = [c.black, c.red, c.green, c.yellow, c.blue, c.magenta, c.cyan, c.white, c.brightBlack, c.brightRed, c.brightGreen, c.brightYellow, c.brightBlue, c.brightMagenta, c.brightCyan, c.brightWhite];
   const lines = [
     '# The Flying Dutchman — Ghostty',
@@ -489,7 +489,7 @@ export function ghostty(p) {
 }
 
 export function warp(name, p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   return `# The Flying Dutchman — Warp
 # Generated from scripts/palette.mjs · do not edit by hand
 name: '${name}'
@@ -521,7 +521,7 @@ terminal_colors:
 }
 
 export function windowsTerminal(name, p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   const up = (h) => h.toUpperCase();
   return {
     name,
@@ -583,7 +583,7 @@ function itermColor(hex) {
 }
 
 export function iterm(p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   const ansiRow = [c.black, c.red, c.green, c.yellow, c.blue, c.magenta, c.cyan, c.white, c.brightBlack, c.brightRed, c.brightGreen, c.brightYellow, c.brightBlue, c.brightMagenta, c.brightCyan, c.brightWhite];
   const entries = {};
   ansiRow.forEach((hex, i) => (entries[`Ansi ${i} Color`] = hex));
@@ -615,7 +615,7 @@ ${body}
 // ---------------------------------------------------------------------------
 
 export function vim(p) {
-  const c = ansi(p, 'standard');
+  const c = ansi(p);
   const term = [c.black, c.red, c.green, c.yellow, c.blue, c.magenta, c.cyan, c.white, c.brightBlack, c.brightRed, c.brightGreen, c.brightYellow, c.brightBlue, c.brightMagenta, c.brightCyan, c.brightWhite];
   const H = (group, fg, bg, gui) => {
     const parts = [`highlight ${group}`];

@@ -81,6 +81,14 @@ const VARIANTS = {
     green: hsl(H.green, 46, 57),
     info: hsl(H.info, 58, 64),
     magenta: hsl(H.magenta, 34, 66),
+    // Terminal bright row — authored per variant so "bright" always reads
+    // brighter than its normal counterpart in that variant's own tonality.
+    brightRed: hsl(H.error, 72, 74),
+    brightGreen: hsl(H.string, 46, 67),
+    brightYellow: hsl(H.constant, 58, 76),
+    brightBlue: hsl(H.info, 54, 74),
+    brightMagenta: hsl(H.magenta, 34, 76),
+    brightCyan: hsl(H.func, 48, 68),
   },
   'high-contrast': {
     bg: hsl(215, 42, 5),
@@ -110,6 +118,12 @@ const VARIANTS = {
     green: hsl(H.green, 58, 65),
     info: hsl(H.info, 70, 73),
     magenta: hsl(H.magenta, 52, 76),
+    brightRed: hsl(H.error, 86, 81),
+    brightGreen: hsl(H.string, 60, 77),
+    brightYellow: hsl(H.constant, 78, 85),
+    brightBlue: hsl(H.info, 65, 83),
+    brightMagenta: hsl(H.magenta, 52, 86),
+    brightCyan: hsl(H.func, 59, 81),
   },
   soft: {
     bg: hsl(H.neutral, 22, 13),
@@ -139,14 +153,23 @@ const VARIANTS = {
     green: hsl(H.green, 32, 60),
     info: hsl(H.info, 40, 67),
     magenta: hsl(H.magenta, 26, 68),
+    brightRed: hsl(H.error, 44, 72),
+    brightGreen: hsl(H.string, 32, 65),
+    brightYellow: hsl(H.constant, 40, 74),
+    brightBlue: hsl(H.info, 36, 72),
+    brightMagenta: hsl(H.magenta, 24, 74),
+    brightCyan: hsl(H.func, 30, 66),
   },
 };
 
-/** Terminal ANSI 16-colour set, derived from a variant's roles. */
-export function ansi(p, variant) {
-  // Bright row lifts lightness a touch; authored per variant for control.
-  const lift = variant === 'soft' ? 8 : 10;
-  const B = (h, s, l) => hsl(h, s, Math.min(l + lift, 96));
+/**
+ * Terminal ANSI 16-colour set for a variant, read entirely from that variant's
+ * own roles. It takes no variant name: every call site used to pass the literal
+ * 'standard', so the High Contrast and Soft themes shipped Standard's bright
+ * row — and in High Contrast that made bright green, yellow and cyan *darker*
+ * than their normal counterparts.
+ */
+export function ansi(p) {
   return {
     black: p.bgChrome,
     red: p.error,
@@ -157,12 +180,12 @@ export function ansi(p, variant) {
     cyan: p.func,
     white: p.fg,
     brightBlack: p.fgMuted,
-    brightRed: B(H.error, variant === 'soft' ? 44 : 72, 64),
-    brightGreen: B(H.string, variant === 'soft' ? 32 : 46, 57),
-    brightYellow: B(H.constant, variant === 'soft' ? 40 : 58, 66),
-    brightBlue: B(H.info, variant === 'soft' ? 36 : 54, 64),
-    brightMagenta: B(H.magenta, variant === 'soft' ? 24 : 34, 66),
-    brightCyan: B(H.func, variant === 'soft' ? 30 : 48, 58),
+    brightRed: p.brightRed,
+    brightGreen: p.brightGreen,
+    brightYellow: p.brightYellow,
+    brightBlue: p.brightBlue,
+    brightMagenta: p.brightMagenta,
+    brightCyan: p.brightCyan,
     brightWhite: p.fgBright,
   };
 }

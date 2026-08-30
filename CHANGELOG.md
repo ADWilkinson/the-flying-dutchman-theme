@@ -8,6 +8,20 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- The High Contrast and Soft variants shipped the Standard variant's bright
+  terminal ANSI row. `ansi()` took a variant name and all six of its call sites
+  passed the literal `'standard'`, so the palette's authored Soft bright row was
+  dead code and High Contrast had no bright row at all. In High Contrast the
+  result was an inversion: bright green (`#84d2b4`), yellow (`#e5d49e`) and cyan
+  (`#86cfd5`) were *darker* than their own normal counterparts (`#7fd7b5`,
+  `#f6db88`, `#86dee4`), so bold integrated-terminal output read duller than
+  plain text in the variant chosen for maximum contrast. Soft got a fully
+  saturated bright row against its muted normal row. `ansi()` now takes only a
+  palette — no caller can pass a wrong variant — and each variant's bright row
+  is authored in `palette.mjs` beside its other roles. The Standard theme and
+  all six terminal/editor ports are byte-identical; only the High Contrast and
+  Soft theme JSONs change.
+
 - `vsce package` shipped a second copy of the whole repository when an agent
   worktree was present. `.vscodeignore` did not name `.worktrees/`, and `vsce`
   reads only that file — never `.gitignore` — so a scratch tree that `git
