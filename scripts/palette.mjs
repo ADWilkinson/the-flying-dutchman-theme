@@ -45,7 +45,7 @@ const H = {
   warn: 37, // signal lamp
   green: 150, // additions
   info: 200, // information blue
-  magenta: 328, // weathered maritime rose (terminal ANSI only)
+  magenta: 328, // weathered maritime rose (terminal ANSI, charts, SCM graph)
 };
 
 // Each variant defines the same roles at different lightness / saturation.

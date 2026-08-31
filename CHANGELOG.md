@@ -8,6 +8,25 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- 102 more workbench colours fell through to VS Code's own stock defaults. The
+  previous audit covered only `src/vs/platform/theme/common/colors/*.ts`, but
+  colours are registered all over the tree, and the registries it missed are the
+  loud ones: the Variables and Watch views drew token names in Dark+ purple
+  (`#c586c0`) and types in Dark+ blue (`#4A90E2`); the suggest widget, outline
+  and breadcrumbs drew method and constructor icons in `#B180D7` and class icons
+  in `#EE9D28`; the three-way merge editor drew its changes in lime
+  (`#9bb95533`) over amber conflict borders (`#ffa600`); the Source Control
+  graph drew branch lanes in magenta and brown; the Test Explorer drew passing
+  tests in `#73c991`; and the debug toolbar drew every step icon in `#75BEFF`.
+  None of those hexes exists anywhere in this palette. Every one is now read
+  from a palette role — debug token expressions and symbol icons from the same
+  roles as the syntax tokens they stand for, so a value in the Variables view is
+  the colour it is in the editor. All three variants gain the same 102 keys
+  (307 -> 409 colours each). `test/workbench-defaults.test.mjs` now audits the
+  whole `registerColor()` registry at VS Code `1.135.0` — 217 keys, up from 29 —
+  and still requires each one to resolve to a palette role rather than a pinned
+  literal.
+
 - The High Contrast and Soft variants shipped the Standard variant's bright
   terminal ANSI row. `ansi()` took a variant name and all six of its call sites
   passed the literal `'standard'`, so the palette's authored Soft bright row was

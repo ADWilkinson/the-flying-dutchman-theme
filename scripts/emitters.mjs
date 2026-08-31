@@ -169,6 +169,7 @@ function workbench(p) {
     'editor.foreground': p.fg,
     'editorLineNumber.foreground': p.fgFaint,
     'editorLineNumber.activeForeground': p.fgMuted,
+    'editorActiveLineNumber.foreground': p.fgMuted,
     'editorCursor.foreground': p.func,
     'editorCursor.background': p.bg,
     'editor.selectionBackground': p.bgSel,
@@ -181,6 +182,8 @@ function workbench(p) {
     'editor.findRangeHighlightBackground': a(p.bgSel, 0x66),
     'editor.hoverHighlightBackground': a(p.func, 0x22),
     'editor.lineHighlightBackground': p.bgLine,
+    // Same colour as the highlight itself: the line reads as one band, not a box.
+    'editor.lineHighlightBorder': p.bgLine,
     'editor.rangeHighlightBackground': a(p.bgSel, 0x44),
     'editor.snippetTabstopHighlightBackground': a(p.bgSel, 0x66),
     'editor.snippetFinalTabstopHighlightBorder': p.func,
@@ -192,6 +195,7 @@ function workbench(p) {
     'editorRuler.foreground': p.borderSubtle,
     'editorCodeLens.foreground': p.fgDim,
     'editorInlayHint.foreground': p.fgDim,
+    'editor.foldPlaceholderForeground': p.fgDim,
     'editorLightBulb.foreground': p.constant,
     'editorLightBulbAutoFix.foreground': p.func,
     'editorBracketMatch.background': a(p.func, 0x22),
@@ -223,12 +227,28 @@ function workbench(p) {
     'editorOverviewRuler.errorForeground': p.error,
     'editorOverviewRuler.warningForeground': p.warn,
     'editorOverviewRuler.infoForeground': p.info,
+    'editorOverviewRuler.bracketMatchForeground': p.fgDim,
+    'editorOverviewRuler.wordHighlightForeground': a(p.func, 0xcc),
+    'editorOverviewRuler.wordHighlightStrongForeground': a(p.property, 0xcc),
 
     // Gutter / minimap
     'minimap.errorHighlight': a(p.error, 0xb3),
     'minimapGutter.modifiedBackground': p.info,
     'minimapGutter.addedBackground': p.green,
     'minimapGutter.deletedBackground': p.error,
+
+    // Symbol icons (outline, breadcrumbs, suggest widget). Read from the same
+    // roles as the syntax tokens so a glyph always matches the code it stands for.
+    'symbolIcon.classForeground': p.type,
+    'symbolIcon.interfaceForeground': p.type,
+    'symbolIcon.enumeratorForeground': p.type,
+    'symbolIcon.eventForeground': p.type,
+    'symbolIcon.enumeratorMemberForeground': p.constant,
+    'symbolIcon.functionForeground': p.func,
+    'symbolIcon.methodForeground': p.func,
+    'symbolIcon.constructorForeground': p.func,
+    'symbolIcon.fieldForeground': p.property,
+    'symbolIcon.variableForeground': p.fg,
 
     // Editor groups & tabs
     'editorGroup.border': p.borderSubtle,
@@ -244,6 +264,7 @@ function workbench(p) {
     'tab.border': p.bgChrome,
     'tab.unfocusedActiveForeground': p.fgMuted,
     'tab.lastPinnedBorder': p.borderSubtle,
+    'tab.activeModifiedBorder': p.info,
 
     // Activity bar
     'activityBar.background': p.bgChrome,
@@ -251,6 +272,8 @@ function workbench(p) {
     'activityBar.inactiveForeground': p.fgDim,
     'activityBar.border': p.bgChrome,
     'activityBar.activeBorder': p.func,
+    'activityBarTop.foreground': p.fg,
+    'profileBadge.background': p.bgHover,
 
     // Side bar
     'sideBar.background': p.bgPanel,
@@ -302,6 +325,7 @@ function workbench(p) {
     'statusBarItem.remoteForeground': p.bgChrome,
     'statusBarItem.errorBackground': p.error,
     'statusBarItem.errorForeground': p.bgChrome,
+    'statusBarItem.offlineBackground': p.error,
 
     // Title bar
     'titleBar.activeBackground': p.bgChrome,
@@ -336,6 +360,7 @@ function workbench(p) {
     'editorWidget.background': p.bgElev,
     'editorWidget.foreground': p.fg,
     'editorWidget.border': p.borderSubtle,
+    'simpleFindWidget.sashBorder': p.borderSubtle,
     'editorSuggestWidget.background': p.bgElev,
     'editorSuggestWidget.border': p.borderSubtle,
     'editorSuggestWidget.foreground': p.fg,
@@ -367,6 +392,12 @@ function workbench(p) {
     'terminal.selectionBackground': p.bgSel,
     'terminalCursor.foreground': p.func,
     'terminalCursor.background': p.bg,
+    'terminal.initialHintForeground': p.fgDim,
+    'terminalStickyScrollHover.background': p.bgHover,
+    'terminalCommandDecoration.defaultBackground': a(p.fgMuted, 0x40),
+    'terminalCommandDecoration.successBackground': p.green,
+    'terminalCommandDecoration.errorBackground': p.error,
+    'terminalOverviewRuler.cursorForeground': a(p.func, 0xcc),
     ...ansiColors(p),
 
     // Breadcrumbs
@@ -409,6 +440,25 @@ function workbench(p) {
     'merge.incomingHeaderBackground': a(p.green, 0x66),
     'merge.incomingContentBackground': a(p.green, 0x33),
     'merge.border': p.borderSubtle,
+    'diffEditor.move.border': a(p.fgMuted, 0x9c),
+    'diffEditor.moveActive.border': p.warn,
+    'diffEditor.unchangedRegionShadow': p.bgChrome,
+    'multiDiffEditor.headerBackground': p.bgPanel,
+
+    // Three-way merge editor. Its stock defaults are a lime/amber/red set that
+    // belongs to no part of this palette; base reads as a removal, ours as an
+    // addition, and an unresolved conflict borrows the warning lamp.
+    'mergeEditor.change.background': a(p.green, 0x22),
+    'mergeEditor.change.word.background': a(p.green, 0x33),
+    'mergeEditor.changeBase.background': a(p.error, 0x22),
+    'mergeEditor.changeBase.word.background': a(p.error, 0x33),
+    'mergeEditor.conflictingLines.background': a(p.constant, 0x33),
+    'mergeEditor.conflict.unhandledFocused.border': p.warn,
+    'mergeEditor.conflict.unhandledUnfocused.border': a(p.warn, 0x7a),
+    'mergeEditor.conflict.handledFocused.border': a(p.fgMuted, 0xcc),
+    'mergeEditor.conflict.handledUnfocused.border': a(p.fgDim, 0x49),
+    'mergeEditor.conflict.unhandled.minimapOverViewRuler': p.warn,
+    'mergeEditor.conflict.handled.minimapOverViewRuler': a(p.fgDim, 0xee),
 
     // Sticky scroll & inline chat
     'editorStickyScroll.background': p.bgPanel,
@@ -418,12 +468,88 @@ function workbench(p) {
     'inlineChatInput.background': p.bgChrome,
     'inlineChatInput.focusBorder': p.func,
 
-    // Debug
+    // Debug. The Variables / Watch / Call Stack views are the largest stock-colour
+    // leak in the workbench: without these, token names draw in Dark+ purple and
+    // the whole toolbar in Dark+ blue.
     'debugToolBar.background': p.bgElev,
     'debugToolBar.border': p.borderSubtle,
     'debugExceptionWidget.background': a(p.error, 0x33),
     'debugExceptionWidget.border': p.error,
     'debugIcon.breakpointForeground': p.error,
+    'debugIcon.breakpointDisabledForeground': p.fgDim,
+    'debugIcon.breakpointUnverifiedForeground': p.fgDim,
+    'debugIcon.breakpointCurrentStackframeForeground': p.constant,
+    'debugIcon.breakpointStackframeForeground': p.green,
+    'debugIcon.startForeground': p.green,
+    'debugIcon.restartForeground': p.green,
+    'debugIcon.pauseForeground': p.info,
+    'debugIcon.continueForeground': p.info,
+    'debugIcon.stepOverForeground': p.info,
+    'debugIcon.stepIntoForeground': p.info,
+    'debugIcon.stepOutForeground': p.info,
+    'debugIcon.stepBackForeground': p.info,
+    'debugIcon.stopForeground': p.error,
+    'debugIcon.disconnectForeground': p.error,
+    // Debug token expressions mirror the syntax roles, so a value in the
+    // Variables view is the same colour as the same value in the editor.
+    'debugTokenExpression.name': p.property,
+    'debugTokenExpression.type': p.type,
+    'debugTokenExpression.value': a(p.fg, 0x99),
+    'debugTokenExpression.string': p.string,
+    'debugTokenExpression.number': p.constant,
+    'debugTokenExpression.boolean': p.constant,
+    'debugTokenExpression.error': p.error,
+    'debugView.exceptionLabelBackground': a(p.error, 0x33),
+    'debugView.stateLabelBackground': a(p.fgMuted, 0x44),
+    'debugView.valueChangedHighlight': p.func,
+    'editor.stackFrameHighlightBackground': a(p.constant, 0x33),
+    'editor.focusedStackFrameHighlightBackground': a(p.green, 0x33),
+    'editor.inlineValuesForeground': p.fgDim,
+    'editor.inlineValuesBackground': a(p.constant, 0x22),
+
+    // Testing
+    'testing.iconPassed': p.green,
+    'testing.iconUnset': p.fgDim,
+    'testing.iconSkipped': p.fgDim,
+
+    // Source control graph. Five branch lanes have to stay distinguishable, so
+    // this is the one place variety is the point — but every lane is a palette
+    // accent, never a stock magenta or brown.
+    'scmGraph.foreground1': p.type,
+    'scmGraph.foreground2': p.coral,
+    'scmGraph.foreground3': p.keyword,
+    'scmGraph.foreground4': p.func,
+    'scmGraph.foreground5': p.magenta,
+    'scmGraph.historyItemBaseRefColor': p.constant,
+    'scmGraph.historyItemHoverAdditionsForeground': p.green,
+    'scmGraph.historyItemHoverDeletionsForeground': p.error,
+
+    // Chat, agent sessions & voice
+    'chat.avatarBackground': p.bgElev,
+    'chat.slashCommandBackground': a(p.bgSel, 0x66),
+    'chat.slashCommandForeground': p.info,
+    'chat.editedFileForeground': p.info,
+    'chat.requestCodeBorder': a(p.border, 0xb8),
+    'chat.checkpointSeparator': p.borderSubtle,
+    'chat.linesAddedForeground': p.green,
+    'chat.linesRemovedForeground': p.error,
+    'chat.thinkingShimmer': p.fgBright,
+    'agentsVoice.speakingForeground': p.func,
+    'agentsVoice.speakingBackground': a(p.func, 0x14),
+    'agentsMobileDiff.addedForeground': p.green,
+    'agentsMobileDiff.modifiedForeground': p.info,
+    'agentsMobileDiff.deletedForeground': p.error,
+
+    // Extension & MCP gallery icons
+    'extensionIcon.starForeground': p.constant,
+    'extensionIcon.preReleaseForeground': p.string,
+    'extensionIcon.sponsorForeground': p.coral,
+    'extensionIcon.privateForeground': p.fgMuted,
+    'mcpIcon.starForeground': p.constant,
+
+    // Welcome page & walkthroughs
+    'welcomePage.tileBorder': p.borderSubtle,
+    'walkthrough.stepTitle.foreground': p.fgBright,
 
     // Misc
     'window.activeBorder': p.bgChrome,
