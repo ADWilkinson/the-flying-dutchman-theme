@@ -8,6 +8,24 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- The Vim / Neovim port left 14 highlight groups on Vim's own built-in
+  defaults. `highlight clear` restores those defaults rather than blanking the
+  table, so every group the port never set drew in a stock colour: the wildmenu
+  completion row was black on `Yellow`, the fold gutter `Cyan` on `Grey`, a
+  `:terminal` status line sat on `LightGreen`, `:set spell` undercurled
+  misspellings in pure `Red`, and `Question` / `MoreMsg` prompted in `Green` and
+  `SeaGreen`. All 14 now read from a palette role, matching their nearest
+  already-themed sibling — `CursorColumn` with `CursorLine`, `StatusLineTerm`
+  with `StatusLine`, `WildMenu` with `PmenuSel`, `FoldColumn` with `SignColumn`,
+  `Conceal` with `Comment`, the spell groups undercurled in the
+  error/warn/coral/info roles so the word keeps its syntax colour. The
+  emitter gained `guisp` for that; no palette value changed, and the other six
+  ports are byte-identical. `test/vim-stock-defaults.test.mjs` pins the 14
+  groups, rejects any gui colour that did not come from `palette.mjs`, and — on
+  any machine with a Vim built with `+eval` and `+termguicolors` — loads the
+  colorscheme and asserts the rendered highlight table contains no Vim built-in
+  colour at all.
+
 - 102 more workbench colours fell through to VS Code's own stock defaults. The
   previous audit covered only `src/vs/platform/theme/common/colors/*.ts`, but
   colours are registered all over the tree, and the registries it missed are the

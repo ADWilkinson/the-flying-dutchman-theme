@@ -33,6 +33,7 @@ highlight NormalFloat guifg=#bfcbd9 guibg=#192029 gui=NONE
 highlight ColorColumn guifg=NONE guibg=#171e26 gui=NONE
 highlight Cursor guifg=#131920 guibg=#5cc4cc gui=NONE
 highlight CursorLine guifg=NONE guibg=#171e26 gui=NONE
+highlight CursorColumn guifg=NONE guibg=#171e26 gui=NONE
 highlight CursorLineNr guifg=#5cc4cc guibg=#171e26 gui=bold
 highlight LineNr guifg=#2a323c guibg=NONE gui=NONE
 highlight NonText guifg=#2a323c guibg=NONE gui=NONE
@@ -47,17 +48,28 @@ highlight Pmenu guifg=#bfcbd9 guibg=#192029 gui=NONE
 highlight PmenuSel guifg=#0c1117 guibg=#5cc4cc gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#192029 gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#8a98a8 gui=NONE
+highlight WildMenu guifg=#0c1117 guibg=#5cc4cc gui=NONE
 highlight StatusLine guifg=#bfcbd9 guibg=#0c1117 gui=NONE
 highlight StatusLineNC guifg=#6a7b8a guibg=#0c1117 gui=NONE
+highlight StatusLineTerm guifg=#bfcbd9 guibg=#0c1117 gui=NONE
+highlight StatusLineTermNC guifg=#6a7b8a guibg=#0c1117 gui=NONE
 highlight TabLine guifg=#6a7b8a guibg=#0c1117 gui=NONE
 highlight TabLineFill guifg=NONE guibg=#0c1117 gui=NONE
 highlight TabLineSel guifg=#e4ebf1 guibg=#131920 gui=NONE
 highlight Title guifg=#5cc4cc guibg=NONE gui=bold
 highlight Folded guifg=#6a7b8a guibg=#0e131a gui=NONE
+highlight FoldColumn guifg=#2a323c guibg=NONE gui=NONE
 highlight SignColumn guifg=#2a323c guibg=NONE gui=NONE
+highlight Conceal guifg=#6a7b8a guibg=NONE gui=NONE
 highlight ErrorMsg guifg=#e56661 guibg=NONE gui=bold
 highlight WarningMsg guifg=#e3ac54 guibg=NONE gui=NONE
+highlight MoreMsg guifg=#5fc491 guibg=NONE gui=NONE
+highlight Question guifg=#6eb5d8 guibg=NONE gui=NONE
 highlight Directory guifg=#5cc4cc guibg=NONE gui=NONE
+
+" GUI toolbar (gvim only — Vim draws it from its own defaults otherwise)
+highlight ToolbarLine guifg=NONE guibg=#0c1117 gui=NONE
+highlight ToolbarButton guifg=#bfcbd9 guibg=#192029 gui=bold
 
 " Syntax
 highlight Comment guifg=#6a7b8a guibg=NONE gui=italic
@@ -97,6 +109,12 @@ highlight DiagnosticError guifg=#e56661 guibg=NONE gui=NONE
 highlight DiagnosticWarn guifg=#e3ac54 guibg=NONE gui=NONE
 highlight DiagnosticInfo guifg=#6eb5d8 guibg=NONE gui=NONE
 highlight DiagnosticHint guifg=#5fc491 guibg=NONE gui=NONE
+
+" Spelling — undercurl only, so the word keeps its syntax colour
+highlight SpellBad guifg=NONE guibg=NONE gui=undercurl guisp=#e56661
+highlight SpellCap guifg=NONE guibg=NONE gui=undercurl guisp=#e3ac54
+highlight SpellRare guifg=NONE guibg=NONE gui=undercurl guisp=#e09585
+highlight SpellLocal guifg=NONE guibg=NONE gui=undercurl guisp=#6eb5d8
 
 " Diff & Git
 highlight DiffAdd guifg=#5fc491 guibg=#171e26 gui=NONE

@@ -743,11 +743,14 @@ ${body}
 export function vim(p) {
   const c = ansi(p);
   const term = [c.black, c.red, c.green, c.yellow, c.blue, c.magenta, c.cyan, c.white, c.brightBlack, c.brightRed, c.brightGreen, c.brightYellow, c.brightBlue, c.brightMagenta, c.brightCyan, c.brightWhite];
-  const H = (group, fg, bg, gui) => {
+  // `sp` is the undercurl/underline colour. Only the spell groups use it, and
+  // omitting the attribute entirely keeps every other line byte-identical.
+  const H = (group, fg, bg, gui, sp) => {
     const parts = [`highlight ${group}`];
     parts.push(`guifg=${fg || 'NONE'}`);
     parts.push(`guibg=${bg || 'NONE'}`);
     parts.push(`gui=${gui || 'NONE'}`);
+    if (sp) parts.push(`guisp=${sp}`);
     return parts.join(' ');
   };
   const L = [
@@ -771,6 +774,7 @@ export function vim(p) {
     H('ColorColumn', null, p.bgLine),
     H('Cursor', p.bg, p.func),
     H('CursorLine', null, p.bgLine),
+    H('CursorColumn', null, p.bgLine),
     H('CursorLineNr', p.func, p.bgLine, 'bold'),
     H('LineNr', p.fgFaint, null),
     H('NonText', p.fgFaint, null),
@@ -785,17 +789,28 @@ export function vim(p) {
     H('PmenuSel', p.bgChrome, p.func),
     H('PmenuSbar', null, p.bgElev),
     H('PmenuThumb', null, p.fgMuted),
+    H('WildMenu', p.bgChrome, p.func),
     H('StatusLine', p.fg, p.bgChrome),
     H('StatusLineNC', p.fgDim, p.bgChrome),
+    H('StatusLineTerm', p.fg, p.bgChrome),
+    H('StatusLineTermNC', p.fgDim, p.bgChrome),
     H('TabLine', p.fgDim, p.bgChrome),
     H('TabLineFill', null, p.bgChrome),
     H('TabLineSel', p.fgBright, p.bg),
     H('Title', p.func, null, 'bold'),
     H('Folded', p.fgDim, p.bgPanel),
+    H('FoldColumn', p.fgFaint, null),
     H('SignColumn', p.fgFaint, null),
+    H('Conceal', p.fgDim, null),
     H('ErrorMsg', p.error, null, 'bold'),
     H('WarningMsg', p.warn, null),
+    H('MoreMsg', p.green, null),
+    H('Question', p.info, null),
     H('Directory', p.func, null),
+    '',
+    '" GUI toolbar (gvim only — Vim draws it from its own defaults otherwise)',
+    H('ToolbarLine', null, p.bgChrome),
+    H('ToolbarButton', p.fg, p.bgElev, 'bold'),
     '',
     '" Syntax',
     H('Comment', p.fgDim, null, 'italic'),
@@ -835,6 +850,12 @@ export function vim(p) {
     H('DiagnosticWarn', p.warn, null),
     H('DiagnosticInfo', p.info, null),
     H('DiagnosticHint', p.green, null),
+    '',
+    '" Spelling — undercurl only, so the word keeps its syntax colour',
+    H('SpellBad', null, null, 'undercurl', p.error),
+    H('SpellCap', null, null, 'undercurl', p.warn),
+    H('SpellRare', null, null, 'undercurl', p.coral),
+    H('SpellLocal', null, null, 'undercurl', p.info),
     '',
     '" Diff & Git',
     H('DiffAdd', p.green, p.bgLine),

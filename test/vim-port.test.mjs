@@ -61,7 +61,7 @@ test('vim port', async (t) => {
     const lines = committed.split('\n').filter((l) => /^ *highlight /.test(l) && l !== 'highlight clear');
     assert.ok(lines.length > 0);
     for (const line of lines) {
-      assert.match(line, /^ *highlight \S+ guifg=(NONE|#[0-9a-f]{6}) guibg=(NONE|#[0-9a-f]{6}) gui=\S+$/, line);
+      assert.match(line, /^ *highlight \S+ guifg=(NONE|#[0-9a-f]{6}) guibg=(NONE|#[0-9a-f]{6}) gui=\S+( guisp=#[0-9a-f]{6})?$/, line);
     }
   });
 
