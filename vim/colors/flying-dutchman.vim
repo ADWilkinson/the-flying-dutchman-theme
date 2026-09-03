@@ -9,7 +9,7 @@ if exists("syntax_on")
 endif
 let g:colors_name = "flying-dutchman"
 
-" Terminal palette
+" Terminal palette — g:terminal_color_* is Neovim, the list below is Vim
 let g:terminal_color_0 = "#0c1117"
 let g:terminal_color_1 = "#e56661"
 let g:terminal_color_2 = "#65bd9c"
@@ -26,6 +26,7 @@ let g:terminal_color_12 = "#99c9e1"
 let g:terminal_color_13 = "#d7adc3"
 let g:terminal_color_14 = "#86cfd5"
 let g:terminal_color_15 = "#e4ebf1"
+let g:terminal_ansi_colors = ["#0c1117", "#e56661", "#65bd9c", "#e0c471", "#6eb5d8", "#c68baa", "#5cc4cc", "#bfcbd9", "#8a98a8", "#ec908d", "#84d2b4", "#e5d49e", "#99c9e1", "#d7adc3", "#86cfd5", "#e4ebf1"]
 
 " Editor UI
 highlight Normal guifg=#bfcbd9 guibg=#131920 gui=NONE

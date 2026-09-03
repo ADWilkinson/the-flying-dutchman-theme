@@ -6,6 +6,24 @@ All notable changes to The Flying Dutchman. Format based on
 
 ## [Unreleased]
 
+### Fixed
+
+- Vim's `:terminal` ignored the theme's ANSI row and opened on Vim's own
+  built-in primaries. The port set `g:terminal_color_0..15`, which only Neovim
+  reads; Vim reads the `g:terminal_ansi_colors` list at `term_start`, and
+  neither name falls back to the other. So with the colorscheme loaded, Vim 9.1
+  still drew terminal output in `#e00000` red, `#00e000` green and `#e000e0`
+  magenta, with a bright half at full chroma — `#40ff40`, `#ffff40`, `#40ffff`,
+  `#ff40ff` — against a foreground tuned to 4.5:1. The port now emits both, from
+  the same 16 palette values, so Vim and Neovim agree.
+  `test/vim-terminal-ansi.test.mjs` pins the list against `palette.mjs`, checks
+  the two editors' rows match each other, and — on any machine with a Vim built
+  with `+eval`, `+termguicolors` and `+terminal` — loads the colorscheme, starts
+  a real terminal and asserts `term_getansicolors()` returns the palette row
+  rather than the stock one. Neovim was never affected and its variables are
+  unchanged; only the Vim port file changes, and the other six ports, all three
+  theme JSONs and the packaged `.vsix` payload are byte-identical.
+
 ## [2.0.3]
 
 ### Fixed

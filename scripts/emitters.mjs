@@ -765,8 +765,15 @@ export function vim(p) {
     'endif',
     'let g:colors_name = "flying-dutchman"',
     '',
-    '" Terminal palette',
+    // The two editors read the terminal palette from different variables and
+    // neither falls back to the other. `g:terminal_color_0..15` is Neovim's;
+    // Vim's `:terminal` reads the `g:terminal_ansi_colors` list at term_start
+    // and, with it unset, renders its own built-in row of saturated primaries
+    // (#e00000, #00e000, #ff40ff ...) straight through a palette whose whole
+    // rule is that nothing shouts. Both are set so either editor gets the row.
+    '" Terminal palette — g:terminal_color_* is Neovim, the list below is Vim',
     ...term.map((hex, i) => `let g:terminal_color_${i} = "${hex}"`),
+    `let g:terminal_ansi_colors = [${term.map((hex) => `"${hex}"`).join(', ')}]`,
     '',
     '" Editor UI',
     H('Normal', p.fg, p.bg),
