@@ -8,6 +8,20 @@ All notable changes to The Flying Dutchman. Format based on
 
 ### Fixed
 
+- The Sublime Text port left 13 of the 24 documented global colour settings
+  unset, so
+  Sublime drew them from its own built-in fallbacks instead of the palette.
+  Matching brackets and tags, the inactive and parent indent guides, a selection
+  in an unfocused pane, the spell-check squiggle, the modified-tab accent and
+  the minimap viewport border all rendered in stock colours. Three of those keys
+  were doubly dead: `bracketsForeground`, `bracketContentsForeground` and
+  `tagsForeground` are only painted in the style their sibling `*Options` key
+  asks for, and no options key was set at all. All 13 now map to existing
+  palette roles — no palette change, and the global dict goes 12 to 28 keys.
+  `test/sublime-globals.test.mjs` pins the documented list, proves every value
+  is a hex the palette can produce, and fails when a conditional foreground
+  ships without the options that draw it.
+
 - Vim's `:terminal` ignored the theme's ANSI row and opened on Vim's own
   built-in primaries. The port set `g:terminal_color_0..15`, which only Neovim
   reads; Vim reads the `g:terminal_ansi_colors` list at `term_start`, and
