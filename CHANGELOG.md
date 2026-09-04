@@ -6,6 +6,11 @@ All notable changes to The Flying Dutchman. Format based on
 
 ## [Unreleased]
 
+## [2.0.4]
+
+Versions 2.0.1 through 2.0.3 were recorded here but never published. This is
+the first Marketplace release since 2.0.0 and includes those changes.
+
 ### Fixed
 
 - The Sublime Text port left 13 of the 24 documented global colour settings
@@ -39,6 +44,8 @@ All notable changes to The Flying Dutchman. Format based on
   theme JSONs and the packaged `.vsix` payload are byte-identical.
 
 ## [2.0.3]
+
+Cut but never published; everything below first reaches users in 2.0.4.
 
 ### Fixed
 
@@ -148,7 +155,7 @@ All notable changes to The Flying Dutchman. Format based on
 ## [2.0.2]
 
 Cut but never published, for the same reason as 2.0.1. The Marketplace served
-2.0.0 throughout; everything below first reaches users in 2.0.3.
+2.0.0 throughout; everything below first reaches users in 2.0.4.
 
 - `npm run check:themes` now also verifies every generated theme file matches
   the palette and emitters byte-for-byte. Check mode is read-only: it names
@@ -159,7 +166,7 @@ Cut but never published, for the same reason as 2.0.1. The Marketplace served
 ## [2.0.1]
 
 Recorded here but never published to the Marketplace, which served 2.0.0 from
-2026-07-12; the badge fix below reaches users in 2.0.3.
+2026-07-12; the badge fix below reaches users in 2.0.4.
 
 - Replaced the README status badges — shields.io retired its `visual-studio-marketplace`
   endpoints (they rendered as "retired badge"). Version/installs/rating now use live
