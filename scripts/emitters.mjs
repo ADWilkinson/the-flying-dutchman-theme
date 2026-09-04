@@ -915,6 +915,17 @@ ${settings.join('\n')}
 		</dict>`;
 }
 
+// Sublime honours a fixed set of global settings; anything the scheme leaves
+// unset it draws from its own built-in fallback, not from this palette. The port
+// defined 11 of the 24 documented colour keys, so bracket and tag matching,
+// indent guides, unfocused selections, the spell-check squiggle, the
+// modified-tab accent and the minimap border all rendered in stock colours. The
+// full documented list is at sublimetext.com/docs/color_schemes_tmtheme.html.
+//
+// Deliberately absent, and not leaks:
+//   popupCss / phantomCss  — CSS blobs for minihtml, not palette roles; Sublime
+//                            derives sane defaults from background/foreground
+//   shadowWidth            — a width in pixels, not a colour
 export function sublime(name, p) {
   const rules = [
     sublimeRule('Comment', 'comment, punctuation.definition.comment', p.fgDim, 'italic'),
@@ -964,20 +975,52 @@ export function sublime(name, p) {
 				<string>${p.fgFaint}</string>
 				<key>lineHighlight</key>
 				<string>${p.bgLine}</string>
-				<key>selection</key>
-				<string>${p.bgSel}</string>
-				<key>selectionForeground</key>
-				<string>${p.fgBright}</string>
-				<key>findHighlight</key>
-				<string>${p.constant}</string>
-				<key>findHighlightForeground</key>
-				<string>${p.bg}</string>
+				<key>misspelling</key>
+				<string>${p.error}</string>
+				<key>minimapBorder</key>
+				<string>${p.border}</string>
+				<key>accent</key>
+				<string>${p.func}</string>
 				<key>gutter</key>
 				<string>${p.bg}</string>
 				<key>gutterForeground</key>
 				<string>${p.fgFaint}</string>
+				<key>selection</key>
+				<string>${p.bgSel}</string>
+				<key>selectionForeground</key>
+				<string>${p.fgBright}</string>
+				<key>selectionBorder</key>
+				<string>${p.bgSel}</string>
+				<key>inactiveSelection</key>
+				<string>${p.bgSelMuted}</string>
+				<key>inactiveSelectionForeground</key>
+				<string>${p.fg}</string>
+				<key>highlight</key>
+				<string>${p.constant}</string>
+				<key>findHighlight</key>
+				<string>${p.constant}</string>
+				<key>findHighlightForeground</key>
+				<string>${p.bg}</string>
+				<key>guide</key>
+				<string>${p.borderSubtle}</string>
 				<key>activeGuide</key>
 				<string>${p.border}</string>
+				<key>stackGuide</key>
+				<string>${p.borderSubtle}</string>
+				<key>bracketsOptions</key>
+				<string>underline</string>
+				<key>bracketsForeground</key>
+				<string>${p.func}</string>
+				<key>bracketContentsOptions</key>
+				<string>stippled_underline</string>
+				<key>bracketContentsForeground</key>
+				<string>${p.fgDim}</string>
+				<key>tagsOptions</key>
+				<string>stippled_underline</string>
+				<key>tagsForeground</key>
+				<string>${p.coral}</string>
+				<key>shadow</key>
+				<string>#00000000</string>
 			</dict>
 		</dict>
 ${rules.join('\n')}

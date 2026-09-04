@@ -19,20 +19,52 @@
 				<string>#2a323c</string>
 				<key>lineHighlight</key>
 				<string>#171e26</string>
-				<key>selection</key>
-				<string>#2c4459</string>
-				<key>selectionForeground</key>
-				<string>#e4ebf1</string>
-				<key>findHighlight</key>
-				<string>#e0c471</string>
-				<key>findHighlightForeground</key>
-				<string>#131920</string>
+				<key>misspelling</key>
+				<string>#e56661</string>
+				<key>minimapBorder</key>
+				<string>#344251</string>
+				<key>accent</key>
+				<string>#5cc4cc</string>
 				<key>gutter</key>
 				<string>#131920</string>
 				<key>gutterForeground</key>
 				<string>#2a323c</string>
+				<key>selection</key>
+				<string>#2c4459</string>
+				<key>selectionForeground</key>
+				<string>#e4ebf1</string>
+				<key>selectionBorder</key>
+				<string>#2c4459</string>
+				<key>inactiveSelection</key>
+				<string>#252d37</string>
+				<key>inactiveSelectionForeground</key>
+				<string>#bfcbd9</string>
+				<key>highlight</key>
+				<string>#e0c471</string>
+				<key>findHighlight</key>
+				<string>#e0c471</string>
+				<key>findHighlightForeground</key>
+				<string>#131920</string>
+				<key>guide</key>
+				<string>#212831</string>
 				<key>activeGuide</key>
 				<string>#344251</string>
+				<key>stackGuide</key>
+				<string>#212831</string>
+				<key>bracketsOptions</key>
+				<string>underline</string>
+				<key>bracketsForeground</key>
+				<string>#5cc4cc</string>
+				<key>bracketContentsOptions</key>
+				<string>stippled_underline</string>
+				<key>bracketContentsForeground</key>
+				<string>#6a7b8a</string>
+				<key>tagsOptions</key>
+				<string>stippled_underline</string>
+				<key>tagsForeground</key>
+				<string>#e09585</string>
+				<key>shadow</key>
+				<string>#00000000</string>
 			</dict>
 		</dict>
 		<dict>
