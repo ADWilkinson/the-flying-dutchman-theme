@@ -24,6 +24,7 @@ test/
 .gitignore
 .github/
 CLAUDE.md
+AGENTS.md
 CONTRIBUTING.md
 CHANGELOG.md
 screenshots/
