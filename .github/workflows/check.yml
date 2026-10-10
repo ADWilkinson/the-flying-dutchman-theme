@@ -16,6 +16,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - run: npm audit
+      # Runtime advisories gate the build; the extension ships no npm dependencies,
+      # and dev-only advisories are reported by the weekly audit digest instead.
+      - run: npm audit --omit=dev
       - run: npm test
       - run: npm run check:themes
