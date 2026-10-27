@@ -12,9 +12,9 @@ every file; `--check` prints a WCAG report and verifies committed outputs
 without rewriting them.
 
 ```bash
-npm run build:themes    # regenerate all editors + all 3 variants
-npm run check:themes    # WCAG + byte-identical generated files (read-only; non-zero on AA or drift)
-npm test                # clean tree passes; stale/missing generated files fail without being rewritten
+bun run build:themes    # regenerate all editors + all 3 variants
+bun run check:themes    # WCAG + byte-identical generated files (read-only; non-zero on AA or drift)
+bun test                # clean tree passes; stale/missing generated files fail without being rewritten
 ```
 
 **Never hand-edit a generated theme file.** Change `palette.mjs`, rebuild, commit
@@ -46,13 +46,13 @@ package.json       # pure theme contribution (contributes.themes only)
 
 ## Publishing
 
-`npm run package` builds the `.vsix` (prepublish regenerates themes first);
-`npm run publish` pushes to the VS Code Marketplace under the `DavyJones`
+`bun run package` regenerates the themes, then builds the `.vsix` with `vsce package --no-dependencies`;
+`bun run publish` regenerates and pushes to the VS Code Marketplace under the `DavyJones`
 publisher. Bump `version` in `package.json` and add a `CHANGELOG.md` entry first.
 
-Merging is not shipping. `npm run check:published` reports whether the listing
+Merging is not shipping. `bun run check:published` reports whether the listing
 actually serves what `package.json` claims; the `Release drift` workflow runs it
 on every push to `main` and weekly and warns without ever blocking a merge. After
-publishing, read it back with `npm run check:published -- --strict`, which exits
+publishing, read it back with `bun run check:published -- --strict`, which exits
 non-zero until the gallery serves the current version (allow ~15 min for CDN
 propagation).

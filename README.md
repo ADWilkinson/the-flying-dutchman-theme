@@ -36,7 +36,7 @@ intensity, so switching never feels like a different theme:
 | Foreground — sea mist | `#bfcbd9` | | Abyss — editor | `#131920` |
 
 Every role clears WCAG AA (4.5:1) against the editor background on all three
-variants; run `npm run check:themes` to see the full contrast report.
+variants; run `bun run check:themes` to see the full contrast report.
 
 ## Install — VS Code
 
@@ -68,8 +68,8 @@ Every theme file in this repo is generated from a single palette so the colours
 can never drift apart across editors or variants:
 
 ```bash
-npm run build:themes    # regenerate all editors from scripts/palette.mjs
-npm run check:themes     # WCAG report; committed files must match the palette (read-only)
+bun run build:themes    # regenerate all editors from scripts/palette.mjs
+bun run check:themes     # WCAG report; committed files must match the palette (read-only)
 ```
 
 To adjust a colour, edit [`scripts/palette.mjs`](scripts/palette.mjs) and rebuild —

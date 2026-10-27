@@ -59,15 +59,18 @@
         ]
     },
     "scripts": {
-        "build:themes": "node scripts/build-themes.mjs",
-        "check:themes": "node scripts/build-themes.mjs --check",
-        "check:published": "node scripts/check-published.mjs",
-        "test": "node --test \"test/*.test.mjs\"",
-        "vscode:prepublish": "node scripts/build-themes.mjs",
-        "package": "vsce package",
-        "publish": "vsce publish"
+        "build:themes": "bun scripts/build-themes.mjs",
+        "check:themes": "bun scripts/build-themes.mjs --check",
+        "check:published": "bun scripts/check-published.mjs",
+        "test": "bun test",
+        "package": "bun run build:themes && vsce package --no-dependencies",
+        "publish": "bun run build:themes && vsce publish --no-dependencies"
     },
     "devDependencies": {
         "@vscode/vsce": "^3.2.1"
-    }
+    },
+    "packageManager": "bun@1.4.2",
+    "trustedDependencies": [
+        "@vscode/vsce-sign"
+    ]
 }

@@ -1,6 +1,6 @@
 // Renders the README hero from the real Standard palette, so the image never
 // drifts from the theme. Emits HTML; rasterise it to screenshots/hero.png with:
-//   node scripts/hero.mjs /tmp/hero.html
+//   bun scripts/hero.mjs /tmp/hero.html
 //   chrome --headless=new --force-device-scale-factor=2 --window-size=960,640 \
 //     --screenshot=screenshots/hero.png file:///tmp/hero.html
 import { writeFileSync } from 'node:fs';

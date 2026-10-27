@@ -9,21 +9,21 @@ Every file under `themes/`, `ghostty/`, `iterm/`, `sublime-text/`, `vim/`,
 [`scripts/palette.mjs`](scripts/palette.mjs).
 
 ```bash
-node scripts/build-themes.mjs          # regenerate every editor + variant
-node scripts/build-themes.mjs --check  # WCAG report + byte-identical generated files (read-only)
-npm test                               # clean tree passes; stale/missing generated files fail without being rewritten
+bun scripts/build-themes.mjs           # regenerate every editor + variant
+bun scripts/build-themes.mjs --check   # WCAG report + byte-identical generated files (read-only)
+bun test                               # clean tree passes; stale/missing generated files fail without being rewritten
 ```
 
 `--check` never creates, overwrites, or repairs generated files. It exits
 non-zero and names the path when any output is missing or does not match the
 palette and emitters exactly.
 
-`node scripts/check-published.mjs` is separate: it asks the Marketplace what it
+`bun scripts/check-published.mjs` is separate: it asks the Marketplace what it
 actually serves and warns when `package.json` has moved ahead. It never fails a
 build — add `--strict` to turn it into a post-publish readback.
 
-The scripts under `scripts/` are plain Node ESM with no dependencies. `npm test`
-does need `npm ci` first: the packaging test runs `vsce ls` to assert the vsix
+The scripts under `scripts/` are plain ESM with no dependencies. `bun test`
+does need `bun install` first: the packaging test runs `vsce ls` to assert the vsix
 ships exactly the seven files a user should receive.
 
 ## Changing a colour
@@ -31,7 +31,7 @@ ships exactly the seven files a user should receive.
 1. Edit the relevant role in `scripts/palette.mjs`. Colours are authored in HSL
    so the three variants stay tonal siblings — change a hue once and it moves
    everywhere consistently.
-2. Run `node scripts/build-themes.mjs` and commit the regenerated files together
+2. Run `bun scripts/build-themes.mjs` and commit the regenerated files together
    with the palette change.
 3. Keep every role at **≥ 4.5:1** against its editor background (`--check`
    enforces this, and that generated files still match). Comments and

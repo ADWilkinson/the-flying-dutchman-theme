@@ -29,6 +29,8 @@ CONTRIBUTING.md
 CHANGELOG.md
 screenshots/
 node_modules/
+# vsce excludes package-lock.json itself but not bun.lock.
+bun.lock
 *.vsix
 .DS_Store
 Thumbs.db

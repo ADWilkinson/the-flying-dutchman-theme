@@ -11,13 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: 22
-          cache: npm
-      - run: npm ci
-      # Runtime advisories gate the build; the extension ships no npm dependencies,
+          bun-version-file: package.json
+      - run: bun install --frozen-lockfile
+      # Runtime advisories gate the build; the extension ships no runtime dependencies,
       # and dev-only advisories are reported by the weekly audit digest instead.
-      - run: npm audit --omit=dev
-      - run: npm test
-      - run: npm run check:themes
+      - run: bun audit --prod
+      - run: bun test
+      - run: bun run check:themes

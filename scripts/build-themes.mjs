@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // Build every editor theme from the master palette.
-// Usage: node scripts/build-themes.mjs [--check]
+// Usage: bun scripts/build-themes.mjs [--check]
 //   --check  print a WCAG contrast report and verify committed outputs match
 //            the palette/emitters. Read-only: never writes or repairs files.
 //            Exits non-zero on AA failures or stale/missing generated files.
@@ -128,7 +128,7 @@ if (checkOnly) {
     console.log('Generated outputs do not match the palette and emitters:');
     for (const f of missing) console.log(`  missing  ${f}`);
     for (const f of stale) console.log(`  stale    ${f}`);
-    console.log('\nRun `npm run build:themes` to regenerate, then commit the result.');
+    console.log('\nRun `bun run build:themes` to regenerate, then commit the result.');
   } else {
     console.log(`All ${artifacts().length} generated file(s) match the palette and emitters.`);
   }

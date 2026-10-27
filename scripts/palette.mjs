@@ -3,7 +3,7 @@
 // One source of truth for every editor and every variant. Colours are authored
 // in HSL so the three variants stay true tonal siblings: they share hues and
 // only move lightness / saturation. Never hand-edit the generated theme files —
-// change a number here and run `npm run build:themes`.
+// change a number here and run `bun run build:themes`.
 //
 // The story: an abyssal blue-black hull, misted in fog. Aged brass and gold from
 // Davy Jones' organ. A bioluminescent teal glow rising from the deep. Seafoam on

@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 // Compare the version in package.json against what the Marketplace actually serves.
-// Usage: node scripts/check-published.mjs [--strict]
+// Usage: bun scripts/check-published.mjs [--strict]
 //   default  report only. Exits 0 whatever it finds, so a warning never blocks a merge.
 //   --strict exits non-zero unless the served version equals package.json. Use this as
-//            the readback after `npm run publish`.
+//            the readback after `bun run publish`.
 //
 // Nothing else in the repo notices when a merged fix is never published: main sat two
 // releases ahead of the listing for six weeks with no signal. This is that signal.
@@ -95,7 +95,7 @@ export function assess({ local, published, error }) {
       level: 'warning',
       message:
         `package.json is ${local} but the Marketplace still serves ${published}. ` +
-        'Every change since that release is unshipped. Run `npm run publish` (needs the publisher PAT).',
+        'Every change since that release is unshipped. Run `bun run publish` (needs the publisher PAT).',
     };
   }
   return {
