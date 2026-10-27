@@ -49,6 +49,7 @@ highlight Pmenu guifg=#bfcbd9 guibg=#192029 gui=NONE
 highlight PmenuSel guifg=#0c1117 guibg=#5cc4cc gui=NONE
 highlight PmenuSbar guifg=NONE guibg=#192029 gui=NONE
 highlight PmenuThumb guifg=NONE guibg=#8a98a8 gui=NONE
+highlight PmenuShadow guifg=#2a323c guibg=#0c1117 gui=NONE
 highlight WildMenu guifg=#0c1117 guibg=#5cc4cc gui=NONE
 highlight StatusLine guifg=#bfcbd9 guibg=#0c1117 gui=NONE
 highlight StatusLineNC guifg=#6a7b8a guibg=#0c1117 gui=NONE

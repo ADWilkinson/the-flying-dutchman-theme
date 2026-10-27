@@ -39,6 +39,7 @@ const STOCK = {
   Conceal: 'guifg=LightGrey guibg=DarkGrey',
   CursorColumn: 'guibg=Grey40',
   FoldColumn: 'guifg=Cyan guibg=Grey',
+  PmenuShadow: 'guifg=DarkGrey guibg=Black', // newer 9.1 patches than 1752 (popup menu shadow)
   MoreMsg: 'guifg=SeaGreen',
   Question: 'guifg=Green',
   SpellBad: 'guisp=Red',

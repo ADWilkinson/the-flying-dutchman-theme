@@ -796,6 +796,7 @@ export function vim(p) {
     H('PmenuSel', p.bgChrome, p.func),
     H('PmenuSbar', null, p.bgElev),
     H('PmenuThumb', null, p.fgMuted),
+    H('PmenuShadow', p.fgFaint, p.bgChrome),
     H('WildMenu', p.bgChrome, p.func),
     H('StatusLine', p.fg, p.bgChrome),
     H('StatusLineNC', p.fgDim, p.bgChrome),
